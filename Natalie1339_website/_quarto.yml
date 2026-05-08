@@ -2,12 +2,20 @@ project:
   type: website
 
 website:
-  title: "Natalie1339_website"
+  title: "Natalie Truesdell"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
+      - href: experience.qmd
+        text: Experience
+    right:
+      - icon: github
+        href: https://github.com/Natalie1339
+      - icon: linkedin
+        href: https://www.linkedin.com/in/natalie-truesdell-948499285/
 
 format:
   html:
@@ -15,7 +23,7 @@ format:
       - cosmo
       - brand
     css: styles.css
-    toc: true
+    toc: false
 
 
 

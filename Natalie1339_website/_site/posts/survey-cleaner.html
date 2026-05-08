@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-03-01">
+<meta name="description" content="An open-source Python package for cleaning and preprocessing survey data, published on TestPyPI.">
 
-<title>Natalie Truesdell</title>
+<title>SurveyCleaner Python Package – Natalie Truesdell</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,28 +25,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-567d88a23c400a65de6264d0d5aa9572.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-567d88a23c400a65de6264d0d5aa9572.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,67 +107,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -142,7 +119,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Natalie Truesdell</span>
     </a>
   </div>
@@ -153,15 +130,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./experience.html"> 
+    <a class="nav-link" href="../experience.html"> 
 <span class="menu-text">Experience</span></a>
   </li>  
 </ul>
@@ -193,14 +170,31 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Natalie Truesdell</h1>
-</div>
+<h1 class="title">SurveyCleaner Python Package</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Open Source</div>
+    <div class="quarto-category">CI/CD</div>
+    <div class="quarto-category">Testing</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    An open-source Python package for cleaning and preprocessing survey data, published on TestPyPI.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 1, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -210,92 +204,152 @@ window.Quarto = {
 </header>
 
 
-<p>Data scientist based in Vancouver, BC. Currently completing my Master of Data Science at UBC — building ML systems, pipelines, and tools that are rigorous and reproducible.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>A lightweight, open-source Python package for cleaning and preprocessing survey data, built through the full development lifecycle — from API design and test-driven development to CI/CD automation and distribution on TestPyPI.</p>
+<p><strong><a href="https://test.pypi.org/project/survey-cleaner/">TestPyPI</a> · <a href="https://github.com/UBC-MDS/DSCI_524_group35_survey_cleaner">GitHub</a> · <a href="https://ubc-mds.github.io/DSCI_524_group35_survey_cleaner/">Docs</a></strong></p>
+<hr>
+</section>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
+<p>Survey data is messy in predictable ways: duplicate responses from the same respondent, inconsistent whitespace, binary answers recorded as “Yes”/“No” or “True”/“False”, and ordinal responses stored as words instead of numbers. Most teams handle this with one-off scripts that aren’t reusable or tested. SurveyCleaner provides a consistent, well-tested API for the most common survey cleaning tasks.</p>
+<hr>
+</section>
+<section id="functions" class="level2">
+<h2 class="anchored" data-anchor-id="functions">Functions</h2>
+<ul>
+<li><strong><code>remove_duplicates</code></strong> — keeps only the latest response from each respondent</li>
+<li><strong><code>handle_emptyStrings</code></strong> — strips and collapses whitespace, handles None values</li>
+<li><strong><code>normalize_binary</code></strong> — converts Yes/No, True/False, T/F to 1/0</li>
+<li><strong><code>word_to_ordinal</code></strong> — maps ranking words (or Likert scale text) to numeric values</li>
+</ul>
+<hr>
+</section>
+<section id="usage" class="level2">
+<h2 class="anchored" data-anchor-id="usage">Usage</h2>
+<section id="remove-duplicate-responses" class="level3">
+<h3 class="anchored" data-anchor-id="remove-duplicate-responses">Remove Duplicate Responses</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> survey_cleaner <span class="im">import</span> remove_duplicates</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>responses <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'respondent_id'</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>],</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'completed_at'</span>: [<span class="st">'2024-01-01 10:00'</span>, <span class="st">'2024-01-01 11:00'</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                     <span class="st">'2024-01-01 12:00'</span>, <span class="st">'2024-01-01 13:00'</span>],</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'answer'</span>: [<span class="st">'Yes'</span>, <span class="st">'No'</span>, <span class="st">'Maybe'</span>, <span class="st">'Yes'</span>]</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>clean_responses <span class="op">=</span> remove_duplicates(responses, <span class="st">'respondent_id'</span>, <span class="st">'completed_at'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="normalize-binary-responses" class="level3">
+<h3 class="anchored" data-anchor-id="normalize-binary-responses">Normalize Binary Responses</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> survey_cleaner <span class="im">import</span> normalize_binary</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'response'</span>: [<span class="st">'Yes'</span>, <span class="st">'No'</span>, <span class="st">'Yes'</span>]})</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'response'</span>] <span class="op">=</span> df[<span class="st">'response'</span>].<span class="bu">apply</span>(normalize_binary)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Result: [1, 0, 1]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="convert-ordinal-responses-to-numeric" class="level3">
+<h3 class="anchored" data-anchor-id="convert-ordinal-responses-to-numeric">Convert Ordinal Responses to Numeric</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> survey_cleaner <span class="im">import</span> word_to_ordinal</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>feedback <span class="op">=</span> pd.Series([<span class="st">"strongly agree"</span>, <span class="st">"agree"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"neither agree nor disagree"</span>, <span class="st">"disagree"</span>])</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Using built-in Likert scale</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>word_to_ordinal(feedback, likert<span class="op">=</span><span class="st">"agreement"</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Or provide a custom mapping</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>word_to_ordinal(feedback, mapping<span class="op">=</span>{<span class="st">"strongly agree"</span>: <span class="dv">5</span>, <span class="st">"disagree"</span>: <span class="dv">2</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="clean-whitespace" class="level3">
+<h3 class="anchored" data-anchor-id="clean-whitespace">Clean Whitespace</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> survey_cleaner <span class="im">import</span> handle_emptyStrings</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'comments'</span>] <span class="op">=</span> df[<span class="st">'comments'</span>].<span class="bu">apply</span>(handle_emptyStrings)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/survey-demo-1.svg" class="img-fluid figure-img"></p>
+<figcaption>Before and after: raw survey inputs transformed to clean numeric output</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="cicd-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="cicd-pipeline">CI/CD Pipeline</h2>
+<p>Four automated workflows keep the package built, tested, and published:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 32%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Workflow</th>
+<th>Trigger</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>build.yml</code></td>
+<td>Push/PR to main</td>
+<td>Runs tests and builds package</td>
+</tr>
+<tr class="even">
+<td><code>deploy.yml</code></td>
+<td>Push to main</td>
+<td>Deploys to TestPyPI after tests pass</td>
+</tr>
+<tr class="odd">
+<td><code>quartodoc.yml</code></td>
+<td>Push/PR to main</td>
+<td>Builds API documentation</td>
+</tr>
+<tr class="even">
+<td><code>quartodoc-publish.yml</code></td>
+<td>Push to main</td>
+<td>Publishes docs to GitHub Pages</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="test-coverage" class="level2">
+<h2 class="anchored" data-anchor-id="test-coverage">Test Coverage</h2>
+<p>Built with test-driven development — tests were written before implementation for core functions. Final coverage: <strong>100%</strong> across modules, tracked via <a href="https://codecov.io/github/ubc-mds/dsci_524_group35_survey_cleaner">Codecov</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/coverage-report.png" class="img-fluid figure-img"></p>
+<figcaption>Pytest coverage report</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">--index-url</span> https://test.pypi.org/simple/ <span class="dt">\</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">--extra-index-url</span> https://pypi.org/simple/ <span class="dt">\</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>            survey_cleaner</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="what-i-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-learned">What I Learned</h2>
+<ul>
+<li>Designing a clean public API is harder than writing the implementation — early versions had unclear method signatures that we refactored based on usability testing with teammates</li>
+<li>CI/CD dramatically reduces maintenance overhead; after setup, releases were essentially one-click</li>
+<li>Test-driven development caught logic bugs before any code ran in production, particularly in the edge cases for <code>normalize_binary</code> and <code>word_to_ordinal</code></li>
+</ul>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RGVlcCUyMExlYXJuaW5nJTJDSGVhbHRoY2FyZSUyQ011bHRpbW9kYWwlMkNQeXRob24=" data-listing-date-sort="1746082800000" data-listing-file-modified-sort="1778202199653" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="300">
-<div class="thumbnail"><a href="./posts/patient-outcomes.html" class="no-external">
-
-<img loading="lazy" src="./images/patient-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/patient-outcomes.html" class="no-external">Multimodal Patient Outcome Prediction</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/patient-outcomes.html" class="no-external">
-<p>Predicting mortality and readmission by combining 3D CT imaging with structured EHR data.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/patient-outcomes.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UHl0aG9uJTJDU2hpbnklMkNEYXRhJTIwVmlzdWFsaXphdGlvbiUyQ0Rhc2hib2FyZA==" data-listing-date-sort="1743490800000" data-listing-file-modified-sort="1778203503506" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="444">
-<div class="thumbnail"><a href="./posts/squirrel-dashboard.html" class="no-external">
-
-<img loading="lazy" src="./images/squirrels-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/squirrel-dashboard.html" class="no-external">NYC Squirrel Census Dashboard</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/squirrel-dashboard.html" class="no-external">
-<p>An interactive dashboard exploring squirrel behavior and spatial patterns in Central Park, built with Shiny for Python.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/squirrel-dashboard.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TkxQJTJDUkFHJTJDUHl0aG9uJTJDRkFJU1M=" data-listing-date-sort="1748761200000" data-listing-file-modified-sort="1778205477104" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1546">
-<div class="thumbnail"><a href="./posts/amazon-search.html" class="no-external">
-
-<img loading="lazy" src="./images/amazon-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/amazon-search.html" class="no-external">Smart Amazon Product Query</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/amazon-search.html" class="no-external">
-<p>An end-to-end RAG system over 2.5M Amazon Fashion reviews, combining BM25 and semantic search with an LLM generator.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/amazon-search.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="UHl0aG9uJTJDT3BlbiUyMFNvdXJjZSUyQ0NJJTJGQ0QlMkNUZXN0aW5n" data-listing-date-sort="1740816000000" data-listing-file-modified-sort="1778206875565" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
-<div class="thumbnail"><a href="./posts/survey-cleaner.html" class="no-external">
-
-<img loading="lazy" src="./images/survey-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/survey-cleaner.html" class="no-external">SurveyCleaner Python Package</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/survey-cleaner.html" class="no-external">
-<p>An open-source Python package for cleaning and preprocessing survey data, published on TestPyPI.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/survey-cleaner.html" class="no-external">
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

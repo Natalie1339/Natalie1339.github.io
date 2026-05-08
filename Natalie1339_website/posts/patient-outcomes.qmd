@@ -1,0 +1,60 @@
+---
+title: "Multimodal Patient Outcome Prediction"
+description: "Predicting mortality and readmission by combining 3D CT imaging with structured EHR data."
+image: ../images/patient-thumb.png
+date: 2025-05
+categories: [Deep Learning, Healthcare, Multimodal, Python]
+---
+
+## Overview
+
+A UBC MDS Capstone project predicting patient mortality and hospital readmission
+at 1, 6, and 12 months post-discharge by fusing 3D CT imaging with structured
+electronic health record (EHR) data. The project replicates and extends a
+published late-fusion architecture, introducing a novel cascaded modeling approach.
+
+---
+
+## Dataset
+
+The [INSPECT dataset](https://www.nature.com/articles/s41597-023-02737-2) —
+23,248 CTPA (CT pulmonary angiography) studies from 19,402 patients, with
+paired structured EHR features and longitudinal outcome labels.
+
+---
+
+## Architecture
+
+### Baseline: Late Fusion (Huang et al.)
+
+The published baseline trains a 3D CNN on CT volumes and a gradient-boosted
+model on EHR features independently, then combines their output probabilities
+via a learned fusion layer.
+
+```
+CT Volume ──► 3D CNN ──► p_ct ─┐
+                                ├──► Fusion Layer ──► Final Prediction
+EHR Features ──► GBM ──► p_ehr ─┘
+```
+
+### Our Extension: Cascaded Fusion
+
+We proposed integrating CT diagnostic outputs *directly into the EHR feature
+vector* before the EHR model trains, so the structured model sees imaging-derived
+signals as features — not just as a parallel output to combine at the end.
+
+```
+CT Volume ──► 3D CNN ──► CT diagnostics ─┐
+                                          ▼
+                         EHR Features + CT diagnostics ──► GBM ──► Final Prediction
+```
+
+This allows the EHR model to learn interactions between imaging findings and
+structured clinical data, rather than treating them as independent.
+
+---
+
+## Target Metric
+
+AUROC ≥ 0.90 across all prediction horizons, validated against the partner
+institution's clinical benchmarks.

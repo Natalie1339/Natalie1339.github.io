@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-04-01">
+<meta name="description" content="An interactive dashboard exploring squirrel behavior and spatial patterns in Central Park, built with Shiny for Python.">
 
-<title>Natalie Truesdell</title>
+<title>NYC Squirrel Census Dashboard – Natalie Truesdell</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,28 +25,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-567d88a23c400a65de6264d0d5aa9572.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-567d88a23c400a65de6264d0d5aa9572.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,67 +107,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -142,7 +119,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Natalie Truesdell</span>
     </a>
   </div>
@@ -153,15 +130,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./experience.html"> 
+    <a class="nav-link" href="../experience.html"> 
 <span class="menu-text">Experience</span></a>
   </li>  
 </ul>
@@ -193,14 +170,31 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Natalie Truesdell</h1>
-</div>
+<h1 class="title">NYC Squirrel Census Dashboard</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Shiny</div>
+    <div class="quarto-category">Data Visualization</div>
+    <div class="quarto-category">Dashboard</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    An interactive dashboard exploring squirrel behavior and spatial patterns in Central Park, built with Shiny for Python.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 1, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -210,92 +204,72 @@ window.Quarto = {
 </header>
 
 
-<p>Data scientist based in Vancouver, BC. Currently completing my Master of Data Science at UBC — building ML systems, pipelines, and tools that are rigorous and reproducible.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>An interactive data visualization dashboard for exploring behavioral patterns and spatial distributions of squirrels in New York City’s Central Park, built using the <a href="https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw">2018 Central Park Squirrel Census</a>.</p>
+<p><strong><a href="https://elsereneee-nycsquirrelmap.share.connect.posit.cloud">Live App</a> · <a href="https://github.com/UBC-MDS/DSCI-532_2026_24_NYC-squirrels">GitHub</a></strong></p>
+<hr>
+</section>
+<section id="what-the-dashboard-does" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-dashboard-does">What the Dashboard Does</h2>
+<p>The app has two tabs:</p>
+<p><strong>Map tab</strong> — a Folium map of all sightings with a sidebar to filter by shift (AM/PM), fur color, age, and behavior. Three Altair bar charts update alongside the map showing fur color counts, shift counts, and top 5 behaviors. A downloadable data table sits below.</p>
+<p><strong>AI Analysis tab</strong> — a natural language chat interface powered by GPT-4.1 via <code>querychat</code>. Ask questions like <em>“show only gray squirrels that were foraging”</em> and the charts and table update to reflect the filtered result.</p>
+<p><img src="../images/squirrels-demo-1.png" class="img-fluid" alt="Map Tab"> <img src="../images/squirrels-demo-2.png" class="img-fluid" alt="AI Analysis Tab"></p>
+<hr>
+</section>
+<section id="architecture" class="level2">
+<h2 class="anchored" data-anchor-id="architecture">Architecture</h2>
+<p>Data is preprocessed once into a Parquet file and a GeoJSON file, then queried at runtime with DuckDB — keeping the app fast without loading the full dataset into memory on every filter change.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>con <span class="op">=</span> duckdb.<span class="ex">connect</span>()</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>con.execute(<span class="ss">f"CREATE VIEW squirrels AS SELECT * FROM read_parquet('</span><span class="sc">{</span>OUT_PAR<span class="sc">}</span><span class="ss">')"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Filtering is driven by a single reactive DuckDB query that builds a WHERE clause from the sidebar inputs:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="at">@reactive.calc</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> filtered_df() <span class="op">-&gt;</span> pd.DataFrame:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    conditions <span class="op">=</span> []</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> selected_shift:</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        conditions.append(<span class="ss">f"shift IN (</span><span class="sc">{</span>placeholders<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> selected_fur:</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        conditions.append(<span class="ss">f"primary_fur_color IN (</span><span class="sc">{</span>placeholders<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> valid_behavior:</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        conditions.append(<span class="ss">f"(</span><span class="sc">{</span><span class="st">' OR '</span><span class="sc">.</span>join(<span class="ss">f'</span><span class="sc">{</span>c<span class="sc">}</span><span class="ss"> = TRUE'</span> <span class="cf">for</span> c <span class="kw">in</span> valid_behavior)<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    where <span class="op">=</span> <span class="ss">f"WHERE </span><span class="sc">{</span><span class="st">' AND '</span><span class="sc">.</span>join(conditions)<span class="sc">}</span><span class="ss">"</span> <span class="cf">if</span> conditions <span class="cf">else</span> <span class="st">""</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> con.execute(<span class="ss">f"SELECT ... FROM squirrels </span><span class="sc">{</span>where<span class="sc">}</span><span class="ss">"</span>).df()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The Folium map renders inside an <code>&lt;iframe&gt;</code> using <code>srcdoc</code>, with a custom HTML/JS legend that syncs fur color selections back to Shiny via <code>Shiny.setInputValue</code>.</p>
+<p>Charts are built with Altair and embedded using <code>vegaEmbed</code> rather than Shiny’s default rendering, which allows <code>width="container"</code> to make them fully responsive.</p>
+<hr>
+</section>
+<section id="ai-chat-integration" class="level2">
+<h2 class="anchored" data-anchor-id="ai-chat-integration">AI Chat Integration</h2>
+<p>The chat tab uses <code>querychat</code> with a <code>ChatGithub</code> client (GPT-4.1). The model translates natural language into filtered DataFrames, which then drive the same chart and table components used in the map tab.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>qc <span class="op">=</span> QueryChat(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    _chat_base_df,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"squirrels"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    client<span class="op">=</span>ChatGithub(model<span class="op">=</span><span class="st">"gpt-4.1"</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="testing" class="level2">
+<h2 class="anchored" data-anchor-id="testing">Testing</h2>
+<p>Unit tests with <strong>pytest</strong> cover data processing logic; end-to-end dashboard behavior is verified with <strong>Playwright</strong>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pytest-playwright</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">playwright</span> install</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pytest</span> tests/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="what-i-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-learned">What I Learned</h2>
+<ul>
+<li>DuckDB as a query layer over Parquet is a clean pattern for dashboard backends — filtering stays fast and the query logic is easy to read and test</li>
+<li>Embedding Folium inside a Shiny iframe works well but requires careful JS bridging to push legend clicks back into Shiny’s reactive graph</li>
+<li><code>querychat</code> abstracts a lot of the LLM-to-dataframe plumbing, but prompt design still matters — the greeting suggestions meaningfully improved the quality of first queries from users unfamiliar with the data</li>
+</ul>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RGVlcCUyMExlYXJuaW5nJTJDSGVhbHRoY2FyZSUyQ011bHRpbW9kYWwlMkNQeXRob24=" data-listing-date-sort="1746082800000" data-listing-file-modified-sort="1778202199653" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="300">
-<div class="thumbnail"><a href="./posts/patient-outcomes.html" class="no-external">
-
-<img loading="lazy" src="./images/patient-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/patient-outcomes.html" class="no-external">Multimodal Patient Outcome Prediction</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/patient-outcomes.html" class="no-external">
-<p>Predicting mortality and readmission by combining 3D CT imaging with structured EHR data.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/patient-outcomes.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UHl0aG9uJTJDU2hpbnklMkNEYXRhJTIwVmlzdWFsaXphdGlvbiUyQ0Rhc2hib2FyZA==" data-listing-date-sort="1743490800000" data-listing-file-modified-sort="1778203503506" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="444">
-<div class="thumbnail"><a href="./posts/squirrel-dashboard.html" class="no-external">
-
-<img loading="lazy" src="./images/squirrels-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/squirrel-dashboard.html" class="no-external">NYC Squirrel Census Dashboard</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/squirrel-dashboard.html" class="no-external">
-<p>An interactive dashboard exploring squirrel behavior and spatial patterns in Central Park, built with Shiny for Python.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/squirrel-dashboard.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TkxQJTJDUkFHJTJDUHl0aG9uJTJDRkFJU1M=" data-listing-date-sort="1748761200000" data-listing-file-modified-sort="1778205477104" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1546">
-<div class="thumbnail"><a href="./posts/amazon-search.html" class="no-external">
-
-<img loading="lazy" src="./images/amazon-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/amazon-search.html" class="no-external">Smart Amazon Product Query</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/amazon-search.html" class="no-external">
-<p>An end-to-end RAG system over 2.5M Amazon Fashion reviews, combining BM25 and semantic search with an LLM generator.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/amazon-search.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="UHl0aG9uJTJDT3BlbiUyMFNvdXJjZSUyQ0NJJTJGQ0QlMkNUZXN0aW5n" data-listing-date-sort="1740816000000" data-listing-file-modified-sort="1778206875565" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
-<div class="thumbnail"><a href="./posts/survey-cleaner.html" class="no-external">
-
-<img loading="lazy" src="./images/survey-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/survey-cleaner.html" class="no-external">SurveyCleaner Python Package</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/survey-cleaner.html" class="no-external">
-<p>An open-source Python package for cleaning and preprocessing survey data, published on TestPyPI.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/survey-cleaner.html" class="no-external">
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

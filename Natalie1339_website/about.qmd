@@ -1,7 +1,36 @@
 ---
-title: "About"
+title: "About Me"
 ---
 
-About this site
+I'm a data scientist with a background in business economics and a passion
+for building ML systems that are rigorous, reproducible, and useful.
 
-This site was created for dsci_521 Lab2 Question 4
+**Available to start:** July 1, 2026 · Vancouver, BC
+· natalieetruesdell@gmail.com
+
+---
+
+## Skills
+
+**Languages & Tools:** Python, R, SQL, Git, Docker, AWS/GCP
+
+**Machine Learning:** NLP, recommender systems, ranking & retrieval,
+CNNs, RNNs, regression, classification, clustering, model evaluation
+
+**Data Engineering:** FAISS, DuckDB, CI/CD, GitHub Actions, unit testing,
+reproducible workflows, scalable ML pipelines
+
+**Statistics:** A/B testing, Bayesian & Frequentist inference,
+time series (ARIMA, GPs, HMMs), causal inference, experimental design
+
+---
+
+## Education
+
+**Master of Data Science** — UBC Vancouver *(Expected June 2026)*
+Cumulative Average: 91%
+Coursework: Machine Learning, Deep Learning, NLP, Cloud Computing,
+Causal Inference, Spatial & Temporal Models, A/B Testing
+
+**B.S. Business Economics, Minor in Data Analytics** — UC San Diego *(2020–2025)*
+GPA: 3.6 / 4.0

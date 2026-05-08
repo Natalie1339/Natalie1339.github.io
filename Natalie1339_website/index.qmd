@@ -1,7 +1,12 @@
 ---
-title: "Natalie1339_website"
+title: "Natalie Truesdell"
+listing:
+  contents: posts
+  type: default
+  fields: [image, title, description]
+  image-height: 220px
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Data scientist based in Vancouver, BC. Currently completing my Master of Data
+Science at UBC — building ML systems, pipelines, and tools that are rigorous
+and reproducible.

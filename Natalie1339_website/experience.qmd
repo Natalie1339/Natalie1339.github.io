@@ -1,0 +1,21 @@
+---
+title: "Experience"
+---
+
+## Data Analytics Intern
+**Acorn Evaluation, Inc.** · Jan 2025 – Jul 2025
+
+- Extracted, cleaned, and analyzed 30K+ record datasets from early childhood
+  intervention programs using reproducible data workflows
+- Built a Python web scraping pipeline to parse 200+ program websites into
+  analysis-ready datasets
+- Developed interactive Tableau dashboards for 5+ clients to monitor KPIs
+- Conducted QA/validation to resolve inconsistencies across datasets and reports
+
+---
+
+## Accounting Intern
+**Lohman & Associates** · Jun 2024 – Nov 2024
+
+- Produced weekly Excel reports tracking internal revenue forecasts and KPIs
+- Identified and resolved data discrepancies to improve reporting accuracy
