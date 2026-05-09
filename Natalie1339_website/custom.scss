@@ -1,0 +1,23 @@
+/*-- scss:rules --*/
+.listing-title {
+  font-weight: 700;
+}
+
+/* full screen */
+@media (min-width: 1400px) {
+  .quarto-listing-default .thumbnail {
+    width: 360px !important;
+    min-width: 360px !important;
+    max-width: 360px !important;
+    height: 220px !important;
+    object-fit: cover !important;
+  }
+}
+
+/* stacked view — control image height */
+@media (max-width: 767px) {
+  div.quarto-post .thumbnail img {
+    height: 200px !important;
+    object-fit: cover !important;
+  }
+}
