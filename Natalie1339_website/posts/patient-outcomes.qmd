@@ -1,0 +1,78 @@
+---
+title: "Multimodal Patient Outcome Prediction"
+description: "Predicting mortality and readmission by combining 3D CT imaging with structured EHR data. UBC MDS Capstone in partnership with Tandem Research."
+order: 2
+image: ../images/patient-thumb.png
+date: 2026-05
+categories: [Deep Learning, Healthcare, Multimodal, Python, In Progress]
+---
+
+::: {.callout-note}
+**In progress** — This is my MDS Capstone project, running May–June 2026
+in partnership with Tandem Research. The pipeline
+is currently in active development; results, evaluation metrics, and full
+write-up will be added upon completion in late June.
+:::
+
+## Overview
+
+A UBC MDS Capstone project predicting patient mortality and hospital
+readmission at 1, 6, and 12 months post-discharge by combining 3D CT
+imaging with structured electronic health record (EHR) data, in partnership
+with Tandem Research.
+
+The primary deliverable is a reproducible ML pipeline with full
+explainability — so clinicians and future data scientists can understand
+not just what the model predicts, but which patient features drive those
+predictions.
+
+---
+
+## The Problem
+
+Clinicians currently lack reliable tools to identify which patients are at
+highest risk of death or readmission after a pulmonary embolism diagnosis.
+Most medical AI models use either tabular EHR data or 3D imaging — rarely
+both. This project aims to close that gap.
+
+---
+
+## Dataset
+
+The [INSPECT dataset](https://doi.org/10.48550/arXiv.2311.10798), curated by
+Stanford Research — 23,248 CTPA (CT pulmonary angiography) studies from
+19,402 patients, integrating 3D imaging with longitudinal EHR data.
+
+---
+
+## Approach
+
+We replicate and extend an existing late-fusion multimodal architecture as
+a baseline, then propose a cascaded approach that introduces imaging-derived
+signals earlier in the pipeline so the EHR model can learn interactions
+between imaging findings and structured clinical data directly.
+
+Both approaches include SHAP-based explainability to identify the most
+influential clinical variables per prediction task.
+
+---
+
+## Explainability
+
+Feature importance analyses will be generated for all model components
+across all prediction tasks, identifying the most influential clinical variables
+per task. Two concrete deliverables are required for partner sign-off:
+
+- A feature importance report summarizing which EHR features drive each prediction
+- Confirmation that outputs are clinically meaningful and interpretable by a
+  non-technical clinician
+
+---
+
+## Success Criteria
+
+- **AUROC ≥ 0.90** across all prediction horizons on the held-out test set
+- **AUPRC ≥ 0.50** to demonstrate robust performance despite class imbalance
+- Full pipeline reproducible from a single command in the GitHub repository
+- Partner sign-off on clinical interpretability
+

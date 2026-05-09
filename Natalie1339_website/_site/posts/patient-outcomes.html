@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-05-01">
+<meta name="description" content="Predicting mortality and readmission by combining 3D CT imaging with structured EHR data. UBC MDS Capstone in partnership with Tandem Research.">
 
-<title>Natalie Truesdell</title>
+<title>Multimodal Patient Outcome Prediction – Natalie Truesdell</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-088d3b55db0107fbd9a07a5fb7781e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-088d3b55db0107fbd9a07a5fb7781e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,67 +72,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -142,7 +84,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Natalie Truesdell</span>
     </a>
   </div>
@@ -153,15 +95,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./experience.html"> 
+    <a class="nav-link" href="../experience.html"> 
 <span class="menu-text">Experience</span></a>
   </li>  
 </ul>
@@ -193,14 +135,32 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Natalie Truesdell</h1>
-</div>
+<h1 class="title">Multimodal Patient Outcome Prediction</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Deep Learning</div>
+    <div class="quarto-category">Healthcare</div>
+    <div class="quarto-category">Multimodal</div>
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">In Progress</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Predicting mortality and readmission by combining 3D CT imaging with structured EHR data. UBC MDS Capstone in partnership with Tandem Research.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 1, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -210,141 +170,63 @@ window.Quarto = {
 </header>
 
 
-<p>I’m a data scientist finishing my Master of Data Science at UBC this summer. Most of my work lives at the intersection of machine learning and real-world messiness — whether that’s wrangling 2.5M product reviews into a search system, fusing CT scans with patient records, or building tools that make survey data less of a headache.</p>
-<p>I care about work that’s reproducible and explainable, not just accurate.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>In progress</strong> — This is my MDS Capstone project, running May–June 2026 in partnership with Tandem Research. The pipeline is currently in active development; results, evaluation metrics, and full write-up will be added upon completion in late June.</p>
+</div>
+</div>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>A UBC MDS Capstone project predicting patient mortality and hospital readmission at 1, 6, and 12 months post-discharge by combining 3D CT imaging with structured electronic health record (EHR) data, in partnership with Tandem Research.</p>
+<p>The primary deliverable is a reproducible ML pipeline with full explainability — so clinicians and future data scientists can understand not just what the model predicts, but which patient features drive those predictions.</p>
 <hr>
-<p>Here’s what I’ve been building:</p>
+</section>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
+<p>Clinicians currently lack reliable tools to identify which patients are at highest risk of death or readmission after a pulmonary embolism diagnosis. Most medical AI models use either tabular EHR data or 3D imaging — rarely both. This project aims to close that gap.</p>
+<hr>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>The <a href="https://doi.org/10.48550/arXiv.2311.10798">INSPECT dataset</a>, curated by Stanford Research — 23,248 CTPA (CT pulmonary angiography) studies from 19,402 patients, integrating 3D imaging with longitudinal EHR data.</p>
+<hr>
+</section>
+<section id="approach" class="level2">
+<h2 class="anchored" data-anchor-id="approach">Approach</h2>
+<p>We replicate and extend an existing late-fusion multimodal architecture as a baseline, then propose a cascaded approach that introduces imaging-derived signals earlier in the pipeline so the EHR model can learn interactions between imaging findings and structured clinical data directly.</p>
+<p>Both approaches include SHAP-based explainability to identify the most influential clinical variables per prediction task.</p>
+<hr>
+</section>
+<section id="explainability" class="level2">
+<h2 class="anchored" data-anchor-id="explainability">Explainability</h2>
+<p>Feature importance analyses will be generated for all model components across all prediction tasks, identifying the most influential clinical variables per task. Two concrete deliverables are required for partner sign-off:</p>
+<ul>
+<li>A feature importance report summarizing which EHR features drive each prediction</li>
+<li>Confirmation that outputs are clinically meaningful and interpretable by a non-technical clinician</li>
+</ul>
+<hr>
+</section>
+<section id="success-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="success-criteria">Success Criteria</h2>
+<ul>
+<li><strong>AUROC ≥ 0.90</strong> across all prediction horizons on the held-out test set</li>
+<li><strong>AUPRC ≥ 0.50</strong> to demonstrate robust performance despite class imbalance</li>
+<li>Full pipeline reproducible from a single command in the GitHub repository</li>
+<li>Partner sign-off on clinical interpretability</li>
+</ul>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TkxQJTJDUkFHJTJDUHl0aG9uJTJDRkFJU1M=" data-listing-date-sort="1748761200000" data-listing-file-modified-sort="1778363401475" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1546">
-<div class="thumbnail"><a href="./posts/amazon-search.html" class="no-external">
-
-<img loading="lazy" src="./images/amazon-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/amazon-search.html" class="no-external">Smart Amazon Product Query</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TkxQ'); return false;">NLP</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UkFH'); return false;">RAG</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RkFJU1M='); return false;">FAISS</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/amazon-search.html" class="no-external">
-<p>An end-to-end RAG system over 2.5M Amazon Fashion reviews, combining BM25 and semantic search with an LLM generator.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/amazon-search.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="RGVlcCUyMExlYXJuaW5nJTJDSGVhbHRoY2FyZSUyQ011bHRpbW9kYWwlMkNQeXRob24lMkNJbiUyMFByb2dyZXNz" data-listing-date-sort="1777618800000" data-listing-file-modified-sort="1778364463387" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="302">
-<div class="thumbnail"><a href="./posts/patient-outcomes.html" class="no-external">
-
-<img loading="lazy" src="./images/patient-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/patient-outcomes.html" class="no-external">Multimodal Patient Outcome Prediction</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGVlcCUyMExlYXJuaW5n'); return false;">Deep Learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SGVhbHRoY2FyZQ=='); return false;">Healthcare</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TXVsdGltb2RhbA=='); return false;">Multimodal</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW4lMjBQcm9ncmVzcw=='); return false;">In Progress</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/patient-outcomes.html" class="no-external">
-<p>Predicting mortality and readmission by combining 3D CT imaging with structured EHR data. UBC MDS Capstone in partnership with Tandem Research.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/patient-outcomes.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="UHl0aG9uJTJDT3BlbiUyMFNvdXJjZSUyQ0NJJTJGQ0QlMkNUZXN0aW5n" data-listing-date-sort="1740816000000" data-listing-file-modified-sort="1778363382790" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
-<div class="thumbnail"><a href="./posts/survey-cleaner.html" class="no-external">
-
-<img loading="lazy" src="./images/survey-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/survey-cleaner.html" class="no-external">SurveyCleaner Python Package</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T3BlbiUyMFNvdXJjZQ=='); return false;">Open Source</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q0klMkZDRA=='); return false;">CI/CD</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VGVzdGluZw=='); return false;">Testing</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/survey-cleaner.html" class="no-external">
-<p>An open-source Python package for cleaning and preprocessing survey data, published on TestPyPI.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/survey-cleaner.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="UHl0aG9uJTJDU2hpbnklMkNEYXRhJTIwVmlzdWFsaXphdGlvbiUyQ0Rhc2hib2FyZA==" data-listing-date-sort="1743490800000" data-listing-file-modified-sort="1778363392683" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="444">
-<div class="thumbnail"><a href="./posts/squirrel-dashboard.html" class="no-external">
-
-<img loading="lazy" src="./images/squirrels-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/squirrel-dashboard.html" class="no-external">NYC Squirrel Census Dashboard</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2hpbnk='); return false;">Shiny</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMFZpc3VhbGl6YXRpb24='); return false;">Data Visualization</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGFzaGJvYXJk'); return false;">Dashboard</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/squirrel-dashboard.html" class="no-external">
-<p>An interactive dashboard exploring squirrel behavior and spatial patterns in Central Park, built with Shiny for Python.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/squirrel-dashboard.html" class="no-external">
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

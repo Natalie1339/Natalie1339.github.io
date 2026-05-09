@@ -1,21 +1,31 @@
 project:
   type: website
+  output-dir: _site
 
 website:
-  title: "Natalie1339_website"
+  title: "Natalie Truesdell"
+  site-url: https://natalie1339.github.io
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
+      - href: experience.qmd
+        text: Experience
+    right:
+      - icon: github
+        href: https://github.com/Natalie1339
+      - icon: linkedin
+        href: https://www.linkedin.com/in/natalie-truesdell-948499285/
 
 format:
   html:
     theme:
-      - cosmo
+      - sandstone
       - brand
     css: styles.css
-    toc: true
+    toc: false
 
 
 
