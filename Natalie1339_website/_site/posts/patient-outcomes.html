@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-05-01">
-<meta name="description" content="Predicting mortality and readmission by combining 3D CT imaging with structured EHR data.">
+<meta name="dcterms.date" content="2026-05-01">
+<meta name="description" content="Predicting mortality and readmission by combining 3D CT imaging with structured EHR data. UBC MDS Capstone in partnership with Tandem Research.">
 
 <title>Multimodal Patient Outcome Prediction – Natalie Truesdell</title>
 <style>
@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-567d88a23c400a65de6264d0d5aa9572.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-088d3b55db0107fbd9a07a5fb7781e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -141,12 +141,13 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-category">Healthcare</div>
     <div class="quarto-category">Multimodal</div>
     <div class="quarto-category">Python</div>
+    <div class="quarto-category">In Progress</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Predicting mortality and readmission by combining 3D CT imaging with structured EHR data.
+    Predicting mortality and readmission by combining 3D CT imaging with structured EHR data. UBC MDS Capstone in partnership with Tandem Research.
   </div>
 </div>
 
@@ -157,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 1, 2025</p>
+      <p class="date">May 1, 2026</p>
     </div>
   </div>
   
@@ -169,38 +170,58 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>In progress</strong> — This is my MDS Capstone project, running May–June 2026 in partnership with Tandem Research. The pipeline is currently in active development; results, evaluation metrics, and full write-up will be added upon completion in late June.</p>
+</div>
+</div>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>A UBC MDS Capstone project predicting patient mortality and hospital readmission at 1, 6, and 12 months post-discharge by fusing 3D CT imaging with structured electronic health record (EHR) data. The project replicates and extends a published late-fusion architecture, introducing a novel cascaded modeling approach.</p>
+<p>A UBC MDS Capstone project predicting patient mortality and hospital readmission at 1, 6, and 12 months post-discharge by combining 3D CT imaging with structured electronic health record (EHR) data, in partnership with Tandem Research.</p>
+<p>The primary deliverable is a reproducible ML pipeline with full explainability — so clinicians and future data scientists can understand not just what the model predicts, but which patient features drive those predictions.</p>
+<hr>
+</section>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
+<p>Clinicians currently lack reliable tools to identify which patients are at highest risk of death or readmission after a pulmonary embolism diagnosis. Most medical AI models use either tabular EHR data or 3D imaging — rarely both. This project aims to close that gap.</p>
 <hr>
 </section>
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
-<p>The <a href="https://www.nature.com/articles/s41597-023-02737-2">INSPECT dataset</a> — 23,248 CTPA (CT pulmonary angiography) studies from 19,402 patients, with paired structured EHR features and longitudinal outcome labels.</p>
+<p>The <a href="https://doi.org/10.48550/arXiv.2311.10798">INSPECT dataset</a>, curated by Stanford Research — 23,248 CTPA (CT pulmonary angiography) studies from 19,402 patients, integrating 3D imaging with longitudinal EHR data.</p>
 <hr>
 </section>
-<section id="architecture" class="level2">
-<h2 class="anchored" data-anchor-id="architecture">Architecture</h2>
-<section id="baseline-late-fusion-huang-et-al." class="level3">
-<h3 class="anchored" data-anchor-id="baseline-late-fusion-huang-et-al.">Baseline: Late Fusion (Huang et al.)</h3>
-<p>The published baseline trains a 3D CNN on CT volumes and a gradient-boosted model on EHR features independently, then combines their output probabilities via a learned fusion layer.</p>
-<pre><code>CT Volume ──► 3D CNN ──► p_ct ─┐
-                                ├──► Fusion Layer ──► Final Prediction
-EHR Features ──► GBM ──► p_ehr ─┘</code></pre>
-</section>
-<section id="our-extension-cascaded-fusion" class="level3">
-<h3 class="anchored" data-anchor-id="our-extension-cascaded-fusion">Our Extension: Cascaded Fusion</h3>
-<p>We proposed integrating CT diagnostic outputs <em>directly into the EHR feature vector</em> before the EHR model trains, so the structured model sees imaging-derived signals as features — not just as a parallel output to combine at the end.</p>
-<pre><code>CT Volume ──► 3D CNN ──► CT diagnostics ─┐
-                                          ▼
-                         EHR Features + CT diagnostics ──► GBM ──► Final Prediction</code></pre>
-<p>This allows the EHR model to learn interactions between imaging findings and structured clinical data, rather than treating them as independent.</p>
+<section id="approach" class="level2">
+<h2 class="anchored" data-anchor-id="approach">Approach</h2>
+<p>We replicate and extend an existing late-fusion multimodal architecture as a baseline, then propose a cascaded approach that introduces imaging-derived signals earlier in the pipeline so the EHR model can learn interactions between imaging findings and structured clinical data directly.</p>
+<p>Both approaches include SHAP-based explainability to identify the most influential clinical variables per prediction task.</p>
 <hr>
 </section>
+<section id="explainability" class="level2">
+<h2 class="anchored" data-anchor-id="explainability">Explainability</h2>
+<p>Feature importance analyses will be generated for all model components across all prediction tasks, identifying the most influential clinical variables per task. Two concrete deliverables are required for partner sign-off:</p>
+<ul>
+<li>A feature importance report summarizing which EHR features drive each prediction</li>
+<li>Confirmation that outputs are clinically meaningful and interpretable by a non-technical clinician</li>
+</ul>
+<hr>
 </section>
-<section id="target-metric" class="level2">
-<h2 class="anchored" data-anchor-id="target-metric">Target Metric</h2>
-<p>AUROC ≥ 0.90 across all prediction horizons, validated against the partner institution’s clinical benchmarks.</p>
+<section id="success-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="success-criteria">Success Criteria</h2>
+<ul>
+<li><strong>AUROC ≥ 0.90</strong> across all prediction horizons on the held-out test set</li>
+<li><strong>AUPRC ≥ 0.50</strong> to demonstrate robust performance despite class imbalance</li>
+<li>Full pipeline reproducible from a single command in the GitHub repository</li>
+<li>Partner sign-off on clinical interpretability</li>
+</ul>
 
 
 </section>
@@ -279,7 +300,7 @@ EHR Features ──► GBM ──► p_ehr ─┘</code></pre>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/natalie1339\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

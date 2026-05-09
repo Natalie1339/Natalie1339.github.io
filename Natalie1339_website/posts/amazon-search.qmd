@@ -1,6 +1,7 @@
 ---
 title: "Smart Amazon Product Query"
 description: "An end-to-end RAG system over 2.5M Amazon Fashion reviews, combining BM25 and semantic search with an LLM generator."
+order: 1
 image: ../images/amazon-thumb.png
 date: 2025-06
 categories: [NLP, RAG, Python, FAISS]

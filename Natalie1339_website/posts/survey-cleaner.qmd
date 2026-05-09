@@ -1,6 +1,7 @@
 ---
 title: "SurveyCleaner Python Package"
 description: "An open-source Python package for cleaning and preprocessing survey data, published on TestPyPI."
+order: 3
 image: ../images/survey-thumb.png
 date: 2025-03
 categories: [Python, Open Source, CI/CD, Testing]
@@ -89,7 +90,7 @@ df['comments'] = df['comments'].apply(handle_emptyStrings)
 ---
 
 ## Example
-![Before and after: raw survey inputs transformed to clean numeric output](../images/survey-demo-1.svg)
+![Before and after: raw survey inputs transformed to clean numeric output](../images/survey-demo-1.png)
 
 ---
 

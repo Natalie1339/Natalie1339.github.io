@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-567d88a23c400a65de6264d0d5aa9572.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-088d3b55db0107fbd9a07a5fb7781e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
@@ -210,52 +210,17 @@ window.Quarto = {
 </header>
 
 
-<p>Data scientist based in Vancouver, BC. Currently completing my Master of Data Science at UBC — building ML systems, pipelines, and tools that are rigorous and reproducible.</p>
+<p>I’m a data scientist finishing my Master of Data Science at UBC this summer. Most of my work lives at the intersection of machine learning and real-world messiness — whether that’s wrangling 2.5M product reviews into a search system, fusing CT scans with patient records, or building tools that make survey data less of a headache.</p>
+<p>I care about work that’s reproducible and explainable, not just accurate.</p>
+<hr>
+<p>Here’s what I’ve been building:</p>
 
 
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RGVlcCUyMExlYXJuaW5nJTJDSGVhbHRoY2FyZSUyQ011bHRpbW9kYWwlMkNQeXRob24=" data-listing-date-sort="1746082800000" data-listing-file-modified-sort="1778202199653" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="300">
-<div class="thumbnail"><a href="./posts/patient-outcomes.html" class="no-external">
-
-<img loading="lazy" src="./images/patient-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/patient-outcomes.html" class="no-external">Multimodal Patient Outcome Prediction</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/patient-outcomes.html" class="no-external">
-<p>Predicting mortality and readmission by combining 3D CT imaging with structured EHR data.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/patient-outcomes.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UHl0aG9uJTJDU2hpbnklMkNEYXRhJTIwVmlzdWFsaXphdGlvbiUyQ0Rhc2hib2FyZA==" data-listing-date-sort="1743490800000" data-listing-file-modified-sort="1778203503506" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="444">
-<div class="thumbnail"><a href="./posts/squirrel-dashboard.html" class="no-external">
-
-<img loading="lazy" src="./images/squirrels-thumb.png" class="thumbnail-image" style="height: 220px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/squirrel-dashboard.html" class="no-external">NYC Squirrel Census Dashboard</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/squirrel-dashboard.html" class="no-external">
-<p>An interactive dashboard exploring squirrel behavior and spatial patterns in Central Park, built with Shiny for Python.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/squirrel-dashboard.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TkxQJTJDUkFHJTJDUHl0aG9uJTJDRkFJU1M=" data-listing-date-sort="1748761200000" data-listing-file-modified-sort="1778205477104" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1546">
+<div class="quarto-post image-right" data-index="0" data-categories="TkxQJTJDUkFHJTJDUHl0aG9uJTJDRkFJU1M=" data-listing-date-sort="1748761200000" data-listing-file-modified-sort="1778363401475" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1546">
 <div class="thumbnail"><a href="./posts/amazon-search.html" class="no-external">
 
 <img loading="lazy" src="./images/amazon-thumb.png" class="thumbnail-image" style="height: 220px;">
@@ -265,6 +230,17 @@ window.Quarto = {
 <h3 class="no-anchor listing-title">
 <a href="./posts/amazon-search.html" class="no-external">Smart Amazon Product Query</a>
 </h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('TkxQ'); return false;">NLP</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UkFH'); return false;">RAG</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RkFJU1M='); return false;">FAISS</div>
+
+</div>
 <div class="delink listing-description"><a href="./posts/amazon-search.html" class="no-external">
 <p>An end-to-end RAG system over 2.5M Amazon Fashion reviews, combining BM25 and semantic search with an LLM generator.</p>
 </a></div>
@@ -274,7 +250,39 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="UHl0aG9uJTJDT3BlbiUyMFNvdXJjZSUyQ0NJJTJGQ0QlMkNUZXN0aW5n" data-listing-date-sort="1740816000000" data-listing-file-modified-sort="1778206875565" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
+<div class="quarto-post image-right" data-index="1" data-categories="RGVlcCUyMExlYXJuaW5nJTJDSGVhbHRoY2FyZSUyQ011bHRpbW9kYWwlMkNQeXRob24lMkNJbiUyMFByb2dyZXNz" data-listing-date-sort="1777618800000" data-listing-file-modified-sort="1778364463387" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="302">
+<div class="thumbnail"><a href="./posts/patient-outcomes.html" class="no-external">
+
+<img loading="lazy" src="./images/patient-thumb.png" class="thumbnail-image" style="height: 220px;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/patient-outcomes.html" class="no-external">Multimodal Patient Outcome Prediction</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGVlcCUyMExlYXJuaW5n'); return false;">Deep Learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SGVhbHRoY2FyZQ=='); return false;">Healthcare</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TXVsdGltb2RhbA=='); return false;">Multimodal</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SW4lMjBQcm9ncmVzcw=='); return false;">In Progress</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/patient-outcomes.html" class="no-external">
+<p>Predicting mortality and readmission by combining 3D CT imaging with structured EHR data. UBC MDS Capstone in partnership with Tandem Research.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/patient-outcomes.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="UHl0aG9uJTJDT3BlbiUyMFNvdXJjZSUyQ0NJJTJGQ0QlMkNUZXN0aW5n" data-listing-date-sort="1740816000000" data-listing-file-modified-sort="1778363382790" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
 <div class="thumbnail"><a href="./posts/survey-cleaner.html" class="no-external">
 
 <img loading="lazy" src="./images/survey-thumb.png" class="thumbnail-image" style="height: 220px;">
@@ -284,12 +292,53 @@ window.Quarto = {
 <h3 class="no-anchor listing-title">
 <a href="./posts/survey-cleaner.html" class="no-external">SurveyCleaner Python Package</a>
 </h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('T3BlbiUyMFNvdXJjZQ=='); return false;">Open Source</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q0klMkZDRA=='); return false;">CI/CD</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VGVzdGluZw=='); return false;">Testing</div>
+
+</div>
 <div class="delink listing-description"><a href="./posts/survey-cleaner.html" class="no-external">
 <p>An open-source Python package for cleaning and preprocessing survey data, published on TestPyPI.</p>
 </a></div>
 </div>
 <div class="metadata">
 <a href="./posts/survey-cleaner.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="UHl0aG9uJTJDU2hpbnklMkNEYXRhJTIwVmlzdWFsaXphdGlvbiUyQ0Rhc2hib2FyZA==" data-listing-date-sort="1743490800000" data-listing-file-modified-sort="1778363392683" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="444">
+<div class="thumbnail"><a href="./posts/squirrel-dashboard.html" class="no-external">
+
+<img loading="lazy" src="./images/squirrels-thumb.png" class="thumbnail-image" style="height: 220px;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/squirrel-dashboard.html" class="no-external">NYC Squirrel Census Dashboard</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U2hpbnk='); return false;">Shiny</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMFZpc3VhbGl6YXRpb24='); return false;">Data Visualization</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGFzaGJvYXJk'); return false;">Dashboard</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/squirrel-dashboard.html" class="no-external">
+<p>An interactive dashboard exploring squirrel behavior and spatial patterns in Central Park, built with Shiny for Python.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/squirrel-dashboard.html" class="no-external">
 </a>
 </div>
 </div>
@@ -369,7 +418,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/natalie1339\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

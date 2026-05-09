@@ -3,10 +3,19 @@ title: "Natalie Truesdell"
 listing:
   contents: posts
   type: default
-  fields: [image, title, description]
+  fields: [image, title, description, categories]
+  sort: "order asc"
   image-height: 220px
 ---
 
-Data scientist based in Vancouver, BC. Currently completing my Master of Data
-Science at UBC — building ML systems, pipelines, and tools that are rigorous
-and reproducible.
+I'm a data scientist finishing my Master of Data Science at UBC this summer.
+Most of my work lives at the intersection of machine learning and real-world
+messiness — whether that's wrangling 2.5M product reviews into a search system,
+fusing CT scans with patient records, or building tools that make survey data
+less of a headache.
+
+I care about work that's reproducible and explainable, not just accurate.
+
+---
+
+Here's what I've been building:
