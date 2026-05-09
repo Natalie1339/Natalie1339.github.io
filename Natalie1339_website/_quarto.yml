@@ -21,10 +21,7 @@ website:
 
 format:
   html:
-    theme:
-      - sandstone
-      - brand
-    css: styles.css
+    theme: [sandstone, custom.scss]
     toc: false
 
 

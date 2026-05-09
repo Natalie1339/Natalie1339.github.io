@@ -5,7 +5,7 @@ listing:
   type: default
   fields: [image, title, description, categories]
   sort: "order asc"
-  image-height: 220px
+  image-height: 150px
 ---
 
 I'm a data scientist finishing my Master of Data Science at UBC this summer.
