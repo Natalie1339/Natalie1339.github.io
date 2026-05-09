@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Natalie Truesdell"
+  site-url: https://natalie1339.github.io
   navbar:
     left:
       - href: index.qmd
