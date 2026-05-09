@@ -2,10 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/patient-outcomes.html",
-      "/posts/squirrel-dashboard.html",
       "/posts/amazon-search.html",
-      "/posts/survey-cleaner.html"
+      "/posts/patient-outcomes.html",
+      "/posts/survey-cleaner.html",
+      "/posts/squirrel-dashboard.html"
     ]
   }
 ]
