@@ -2,7 +2,7 @@ name: Publish Quarto Site
 
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
 
 jobs:
   build-and-deploy:
@@ -28,9 +28,18 @@ jobs:
       - name: Render Quarto site
         run: quarto render Natalie1339_website
 
-      - name: Publish to GitHub Pages
+      - name: Publish to GitHub Pages (production)
+        if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: Natalie1339_website/_site
           publish_branch: gh-pages
+
+      - name: Publish to GitHub Pages (preview)
+        if: github.ref == 'refs/heads/dev'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: Natalie1339_website/_site
+          publish_branch: gh-pages-dev
