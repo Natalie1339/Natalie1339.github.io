@@ -36,7 +36,7 @@ Structured clinical history was modeled two complementary ways:
 
 Both paths were designed with leakage-free, patient-level data splits and a temporal offset between recorded history and prediction time.
 
-![Dual-track EHR pipeline: tabular features feed a gradient-boosted model, while raw event sequences feed a transformer encoder that produces patient embeddings.](images/ehr_model_pipeline.png)
+![Dual-track EHR pipeline: tabular features feed a gradient-boosted model, while raw event sequences feed a transformer encoder that produces patient embeddings.](../images/ehr_model_pipeline.png)
 
 ### Imaging Modeling
 
@@ -50,7 +50,7 @@ We evaluated two ways of combining imaging and EHR signals:
 
 2. **Cascaded fusion (feature-level integration):** imaging-derived risk scores are injected directly as a feature into the tabular EHR pipeline, allowing a downstream model to learn nonlinear interactions between imaging and clinical variables natively.
 
-![Cascaded fusion: an imaging-derived risk score is merged into the EHR feature matrix, then combined with the sequence model's output via late fusion to produce the final prediction.](images/cascaded_fusion_diagram.png)
+![Cascaded fusion: an imaging-derived risk score is merged into the EHR feature matrix, then combined with the sequence model's output via late fusion to produce the final prediction.](../images/cascaded_fusion_diagram.png)
 
 No single fusion strategy dominated across every clinical task — the EHR-only models were consistently strong, and feature-level (cascaded) integration of imaging signal tended to outperform decision-level fusion, suggesting that *how* modalities are combined matters as much as *whether* they're combined at all.
 
