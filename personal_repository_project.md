@@ -10,4 +10,4 @@ Python 3.12.11
 ### Updates
 May 9, 2026: Initial portfolio site built with Quarto, deployed via GitHub Actions to GitHub Pages.
 
-June 9, 2026: Update Multimodal Patient Outcome Prediction post after finishing Capstone project.
+June 29, 2026: Update Multimodal Patient Outcome Prediction post after finishing Capstone project.
