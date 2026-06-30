@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://natalie1339.github.io/index.html</loc>
-    <lastmod>2026-05-09T23:33:50.649Z</lastmod>
-  </url>
-  <url>
-    <loc>https://natalie1339.github.io/posts/squirrel-dashboard.html</loc>
-    <lastmod>2026-05-09T23:33:50.650Z</lastmod>
-  </url>
-  <url>
-    <loc>https://natalie1339.github.io/posts/amazon-search.html</loc>
-    <lastmod>2026-05-09T23:33:50.649Z</lastmod>
-  </url>
-  <url>
-    <loc>https://natalie1339.github.io/experience.html</loc>
-    <lastmod>2026-05-09T23:33:50.623Z</lastmod>
-  </url>
-  <url>
-    <loc>https://natalie1339.github.io/posts/survey-cleaner.html</loc>
-    <lastmod>2026-05-09T23:33:50.650Z</lastmod>
-  </url>
-  <url>
-    <loc>https://natalie1339.github.io/posts/patient-outcomes.html</loc>
-    <lastmod>2026-05-09T23:33:50.650Z</lastmod>
+    <loc>https://natalie1339.github.io/resume.html</loc>
+    <lastmod>2026-06-30T02:53:03.115Z</lastmod>
   </url>
   <url>
     <loc>https://natalie1339.github.io/about.html</loc>
-    <lastmod>2026-05-09T23:33:50.623Z</lastmod>
+    <lastmod>2026-06-30T02:53:03.084Z</lastmod>
+  </url>
+  <url>
+    <loc>https://natalie1339.github.io/posts/squirrel-dashboard.html</loc>
+    <lastmod>2026-06-30T02:53:03.115Z</lastmod>
+  </url>
+  <url>
+    <loc>https://natalie1339.github.io/posts/patient-outcomes.html</loc>
+    <lastmod>2026-06-30T02:53:03.115Z</lastmod>
+  </url>
+  <url>
+    <loc>https://natalie1339.github.io/experience.html</loc>
+    <lastmod>2026-06-30T02:53:03.084Z</lastmod>
+  </url>
+  <url>
+    <loc>https://natalie1339.github.io/posts/survey-cleaner.html</loc>
+    <lastmod>2026-06-30T02:53:03.115Z</lastmod>
+  </url>
+  <url>
+    <loc>https://natalie1339.github.io/posts/amazon-search.html</loc>
+    <lastmod>2026-06-30T02:53:03.114Z</lastmod>
+  </url>
+  <url>
+    <loc>https://natalie1339.github.io/index.html</loc>
+    <lastmod>2026-06-30T02:53:03.114Z</lastmod>
   </url>
 </urlset>
