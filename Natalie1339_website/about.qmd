@@ -5,32 +5,37 @@ title: "About Me"
 I'm a data scientist with a background in business economics and a passion
 for building ML systems that are rigorous, reproducible, and useful.
 
-**Available to start:** July 1, 2026 · Vancouver, BC
+**Available to start:** July 15, 2026 · Vancouver, BC
 · natalieetruesdell@gmail.com
 
 ---
 
 ## Skills
 
-**Languages & Tools:** Python, R, SQL, Git, Docker, AWS/GCP
+**Languages & Tools:** Python, R, SQL, Bash, Git, Docker
 
-**Machine Learning:** NLP, recommender systems, ranking & retrieval,
-CNNs, RNNs, regression, classification, clustering, model evaluation
+**Machine Learning:** Pandas, NumPy, Scikit-learn, XGBoost, TensorFlow, PyTorch, feature engineering, supervised & unsupervised learning, deep learning, model evaluation, cross-validation, hyperparameter tuning
 
-**Data Engineering:** FAISS, DuckDB, CI/CD, GitHub Actions, unit testing,
-reproducible workflows, scalable ML pipelines
+**LLM Technologies**: OpenAI API, LangChain, FAISS, RAG Pipelines, Prompt Engineering, Vector Search, Embedding Models, Tool Calling, LLM Evaluation
 
-**Statistics:** A/B testing, Bayesian & Frequentist inference,
-time series (ARIMA, GPs, HMMs), causal inference, experimental design
+**Data Engineering & Cloud:** GCP (Vertex AI, GCS, GCE), AWS, PyArrow, CI/CD, GitHub Actions, data pipelines, workflow automation, data validation, QA/testing
+
+**Statistics:** Hypothesis testing, regression modeling, Bayesian inference, experimental design, causal inference, A/B testing, time series analysis
 
 ---
 
 ## Education
 
-**Master of Data Science** — UBC Vancouver *(Expected June 2026)*
-Cumulative Average: 91%
+**Master of Data Science** — UBC Vancouver 
+*Aug 2025 – Jun 2026*
+
+Cumulative Average: 92%
+
 Coursework: Machine Learning, Deep Learning, NLP, Cloud Computing,
 Causal Inference, Spatial & Temporal Models, A/B Testing
 
-**B.S. Business Economics, Minor in Data Analytics** — UC San Diego *(2020–2025)*
+**B.S. Business Economics, Minor in Data Analytics** — UC San Diego 
+
+*Sept 2020 – Jun 2025*
+
 GPA: 3.6 / 4.0

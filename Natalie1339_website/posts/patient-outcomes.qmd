@@ -3,76 +3,79 @@ title: "Multimodal Patient Outcome Prediction"
 description: "Predicting mortality and readmission by combining 3D CT imaging with structured EHR data. UBC MDS Capstone in partnership with Tandem Research."
 order: 2
 image: ../images/patient-thumb.png
-date: 2026-05
-categories: [Deep Learning, Healthcare, Multimodal, Python, In Progress]
+date: 2026-06
+categories: [machine learning, healthcare, multimodal, explainability]
 ---
 
 ::: {.callout-note}
-**In progress** — This is my MDS Capstone project, running May–June 2026
-in partnership with Tandem Research. The pipeline
-is currently in active development; results, evaluation metrics, and full
-write-up will be added upon completion in late June.
+## Project Context
+
+This project was completed as part of my Master's capstone in partnership with **Tandem Research**. Tandem partners with healthcare organizations on applied data science initiatives, and some details of this project — including the specific clinical dataset used, exact performance results, and certain visual outputs (e.g. model explainability figures) — are private and protected under a non-disclosure agreement. This post describes the methodology, modeling approach, and high-level findings at a level appropriate for public sharing.
 :::
 
 ## Overview
 
-A UBC MDS Capstone project predicting patient mortality and hospital
-readmission at 1, 6, and 12 months post-discharge by combining 3D CT
-imaging with structured electronic health record (EHR) data, in partnership
-with Tandem Research.
+Clinicians often lack reliable tools to identify which patients are at the highest risk of death or hospital readmission following a serious diagnosis. Most existing machine learning approaches in healthcare rely on a single data source — either structured electronic health records (EHR) or medical imaging — but rarely combine both. This means models built on a single modality may miss important context available elsewhere in a patient's record.
 
-The primary deliverable is a reproducible ML pipeline with full
-explainability — so clinicians and future data scientists can understand
-not just what the model predicts, but which patient features drive those
-predictions.
+Working with a healthcare-focused research partner, our team set out to answer:
 
----
+> How can structured EHR data and 3D medical imaging be combined into a multimodal machine learning framework to predict patient mortality and hospital readmission?
 
-## The Problem
-
-Clinicians currently lack reliable tools to identify which patients are at
-highest risk of death or readmission after a pulmonary embolism diagnosis.
-Most medical AI models use either tabular EHR data or 3D imaging — rarely
-both. This project aims to close that gap.
-
----
-
-## Dataset
-
-The [INSPECT dataset](https://doi.org/10.48550/arXiv.2311.10798), curated by
-Stanford Research — 23,248 CTPA (CT pulmonary angiography) studies from
-19,402 patients, integrating 3D imaging with longitudinal EHR data.
-
----
+We built a reproducible, end-to-end pipeline that integrates tabular clinical history with volumetric imaging data, explored multiple ways of fusing those signals together, and prioritized interpretability throughout, since our partner's goal was a research tool that clinicians and data scientists could trust and build on, not a black box.
 
 ## Approach
 
-We replicate and extend an existing late-fusion multimodal architecture as
-a baseline, then propose a cascaded approach that introduces imaging-derived
-signals earlier in the pipeline so the EHR model can learn interactions
-between imaging findings and structured clinical data directly.
+### EHR Modeling
 
-Both approaches include SHAP-based explainability to identify the most
-influential clinical variables per prediction task.
+Before modeling, raw clinical history goes through a standardized preprocessing pipeline: cohorts are defined, records are standardized into a common data format, outcome labels are aligned to a fixed prediction window with a temporal offset to avoid leakage, and patient features are constructed.
 
----
+Structured clinical history was modeled two complementary ways:
 
-## Explainability
+- A **gradient-boosted tree model (LightGBM)** trained on aggregated, ontology-based event counts — effective at capturing nonlinear interactions in tabular clinical features.
+- A **transformer-based sequence model** trained directly on longitudinal clinical event sequences, producing contextual patient embeddings that capture how a patient's history unfolds over time.
 
-Feature importance analyses will be generated for all model components
-across all prediction tasks, identifying the most influential clinical variables
-per task. Two concrete deliverables are required for partner sign-off:
+Both paths were designed with leakage-free, patient-level data splits and a temporal offset between recorded history and prediction time.
 
-- A feature importance report summarizing which EHR features drive each prediction
-- Confirmation that outputs are clinically meaningful and interpretable by a
-  non-technical clinician
+![Dual-track EHR pipeline: tabular features feed a gradient-boosted model, while raw event sequences feed a transformer encoder that produces patient embeddings.](../images/ehr_model_pipeline.png)
 
----
+### Imaging Modeling
 
-## Success Criteria
+Medical imaging studies were processed through a slice-based encoder followed by a sequential aggregation model (bidirectional LSTM) to produce a single per-patient risk score. Imaging features were extracted using a pretrained convolutional backbone and aggregated across hundreds of image slices per study.
 
-- **AUROC ≥ 0.90** across all prediction horizons on the held-out test set
-- **AUPRC ≥ 0.50** to demonstrate robust performance despite class imbalance
-- Full pipeline reproducible from a single command in the GitHub repository
-- Partner sign-off on clinical interpretability
+### Fusion Strategies
 
+We evaluated two ways of combining imaging and EHR signals:
+
+1. **Late fusion (stacking):** independent model outputs from each modality are combined via logistic regression, allowing systematic comparison of single-modality, pairwise, and full multimodal configurations.
+
+2. **Cascaded fusion (feature-level integration):** imaging-derived risk scores are injected directly as a feature into the tabular EHR pipeline, allowing a downstream model to learn nonlinear interactions between imaging and clinical variables natively.
+
+![Cascaded fusion: an imaging-derived risk score is merged into the EHR feature matrix, then combined with the sequence model's output via late fusion to produce the final prediction.](../images/cascaded_fusion_diagram.png)
+
+No single fusion strategy dominated across every clinical task — the EHR-only models were consistently strong, and feature-level (cascaded) integration of imaging signal tended to outperform decision-level fusion, suggesting that *how* modalities are combined matters as much as *whether* they're combined at all.
+
+### Interpretability
+
+Because the project's primary stakeholder cared as much about *why* a model made a prediction as the prediction itself, explainability was built into the pipeline rather than added after the fact. Techniques used included:
+
+- **TreeSHAP** values to identify which clinical features drove individual gradient-boosted model predictions, with features mapped back to human-readable clinical concepts.
+- **Integrated Gradients and embedding probing** to interpret the transformer-based sequence model's hidden representations.
+- **Grad-CAM and slice-importance analysis** on the imaging model, to surface which regions of a scan most influenced a prediction.
+- A **censoring/lookback analysis** that systematically restricted how much patient history a model could see, in order to measure how predictive performance degrades as historical context shrinks.
+
+The specific outputs of these analyses (e.g. SHAP plots, Grad-CAM heatmaps) are part of the project's private deliverables and aren't included here, but the methodology itself is described above.
+
+## Data Product
+
+Rather than building a standalone dashboard, we delivered a cloud-based, queryable pipeline: every model run, prediction, and explainability output is logged and stored so that our research partner's team can query results directly and extend the pipeline to new datasets without rebuilding infrastructure from scratch. The emphasis throughout was on reproducibility and modularity — each pipeline component (imaging featurization, EHR modeling, fusion, explainability) can be rerun or swapped independently.
+
+## Key Takeaways
+
+- EHR-based models were consistently strong predictors of mortality and readmission risk on their own.
+- Imaging signal added the most value when integrated at the feature level rather than the decision level.
+- No single fusion configuration was best across every task — the right approach depends on the specific clinical question being asked.
+- Building interpretability into the pipeline from the start (rather than retrofitting it) made the results far more actionable for clinical stakeholders.
+
+## Future Directions
+
+Recommended next steps include evaluating the full dataset at scale, restricting model inputs to information available earlier in a patient's care pathway to improve real-world deployment practicality, completing the historical-lookback experiments at full scale, and containerizing the pipeline to improve reproducibility for future projects.

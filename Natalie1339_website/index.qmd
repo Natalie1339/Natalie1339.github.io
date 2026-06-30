@@ -8,13 +8,7 @@ listing:
   image-height: 150px
 ---
 
-I'm a data scientist finishing my Master of Data Science at UBC this summer.
-Most of my work lives at the intersection of machine learning and real-world
-messiness — whether that's wrangling 2.5M product reviews into a search system,
-fusing CT scans with patient records, or building tools that make survey data
-less of a headache.
-
-I care about work that's reproducible and explainable, not just accurate.
+I’m a Data Scientist based in Vancouver, recently finished with my Master of Data Science at UBC. I thrive at the intersection of machine learning and messy, real-world data. Whether I’m wrangling millions of product reviews, fusing clinical imaging with EHR data, or building tools to make data cleaning less of a headache, I am always focused on the practical application of my work. Above all, I believe in building models that are transparent, reproducible, and ready for the real world.
 
 ---
 

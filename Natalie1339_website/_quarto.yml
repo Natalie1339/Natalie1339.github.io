@@ -13,6 +13,8 @@ website:
         text: About
       - href: experience.qmd
         text: Experience
+      - href: resume.qmd
+        text: Resume
     right:
       - icon: github
         href: https://github.com/Natalie1339
@@ -23,6 +25,7 @@ format:
   html:
     theme: [sandstone, custom.scss]
     toc: false
+    bootstrap-icons: true
 
 
 
