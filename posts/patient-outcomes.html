@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-05-01">
+<meta name="dcterms.date" content="2026-06-01">
 <meta name="description" content="Predicting mortality and readmission by combining 3D CT imaging with structured EHR data. UBC MDS Capstone in partnership with Tandem Research.">
 
 <title>Multimodal Patient Outcome Prediction – Natalie Truesdell</title>
@@ -41,10 +41,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-786f4afb788f3159a94c380d5432c24f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b4cd8a18951cacdbfe24ef27260e3a50.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,6 +105,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../experience.html"> 
 <span class="menu-text">Experience</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resume.html"> 
+<span class="menu-text">Resume</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -136,11 +140,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title">
 <h1 class="title">Multimodal Patient Outcome Prediction</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Deep Learning</div>
-    <div class="quarto-category">Healthcare</div>
-    <div class="quarto-category">Multimodal</div>
-    <div class="quarto-category">Python</div>
-    <div class="quarto-category">In Progress</div>
+    <div class="quarto-category">machine learning</div>
+    <div class="quarto-category">healthcare</div>
+    <div class="quarto-category">multimodal</div>
+    <div class="quarto-category">explainability</div>
   </div>
   </div>
 
@@ -157,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 1, 2026</p>
+      <p class="date">June 1, 2026</p>
     </div>
   </div>
   
@@ -175,52 +178,87 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Note</span>Project Context
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>In progress</strong> — This is my MDS Capstone project, running May–June 2026 in partnership with Tandem Research. The pipeline is currently in active development; results, evaluation metrics, and full write-up will be added upon completion in late June.</p>
+<p>This project was completed as part of my Master’s capstone in partnership with <strong>Tandem Research</strong>. Tandem partners with healthcare organizations on applied data science initiatives, and some details of this project — including the specific clinical dataset used, exact performance results, and certain visual outputs (e.g.&nbsp;model explainability figures) — are private and protected under a non-disclosure agreement. This post describes the methodology, modeling approach, and high-level findings at a level appropriate for public sharing.</p>
 </div>
 </div>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>A UBC MDS Capstone project predicting patient mortality and hospital readmission at 1, 6, and 12 months post-discharge by combining 3D CT imaging with structured electronic health record (EHR) data, in partnership with Tandem Research.</p>
-<p>The primary deliverable is a reproducible ML pipeline with full explainability — so clinicians and future data scientists can understand not just what the model predicts, but which patient features drive those predictions.</p>
-<hr>
-</section>
-<section id="the-problem" class="level2">
-<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
-<p>Clinicians currently lack reliable tools to identify which patients are at highest risk of death or readmission after a pulmonary embolism diagnosis. Most medical AI models use either tabular EHR data or 3D imaging — rarely both. This project aims to close that gap.</p>
-<hr>
-</section>
-<section id="dataset" class="level2">
-<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
-<p>The <a href="https://doi.org/10.48550/arXiv.2311.10798">INSPECT dataset</a>, curated by Stanford Research — 23,248 CTPA (CT pulmonary angiography) studies from 19,402 patients, integrating 3D imaging with longitudinal EHR data.</p>
-<hr>
+<p>Clinicians often lack reliable tools to identify which patients are at the highest risk of death or hospital readmission following a serious diagnosis. Most existing machine learning approaches in healthcare rely on a single data source — either structured electronic health records (EHR) or medical imaging — but rarely combine both. This means models built on a single modality may miss important context available elsewhere in a patient’s record.</p>
+<p>Working with a healthcare-focused research partner, our team set out to answer:</p>
+<blockquote class="blockquote">
+<p>How can structured EHR data and 3D medical imaging be combined into a multimodal machine learning framework to predict patient mortality and hospital readmission?</p>
+</blockquote>
+<p>We built a reproducible, end-to-end pipeline that integrates tabular clinical history with volumetric imaging data, explored multiple ways of fusing those signals together, and prioritized interpretability throughout, since our partner’s goal was a research tool that clinicians and data scientists could trust and build on, not a black box.</p>
 </section>
 <section id="approach" class="level2">
 <h2 class="anchored" data-anchor-id="approach">Approach</h2>
-<p>We replicate and extend an existing late-fusion multimodal architecture as a baseline, then propose a cascaded approach that introduces imaging-derived signals earlier in the pipeline so the EHR model can learn interactions between imaging findings and structured clinical data directly.</p>
-<p>Both approaches include SHAP-based explainability to identify the most influential clinical variables per prediction task.</p>
-<hr>
-</section>
-<section id="explainability" class="level2">
-<h2 class="anchored" data-anchor-id="explainability">Explainability</h2>
-<p>Feature importance analyses will be generated for all model components across all prediction tasks, identifying the most influential clinical variables per task. Two concrete deliverables are required for partner sign-off:</p>
+<section id="ehr-modeling" class="level3">
+<h3 class="anchored" data-anchor-id="ehr-modeling">EHR Modeling</h3>
+<p>Before modeling, raw clinical history goes through a standardized preprocessing pipeline: cohorts are defined, records are standardized into a common data format, outcome labels are aligned to a fixed prediction window with a temporal offset to avoid leakage, and patient features are constructed.</p>
+<p>Structured clinical history was modeled two complementary ways:</p>
 <ul>
-<li>A feature importance report summarizing which EHR features drive each prediction</li>
-<li>Confirmation that outputs are clinically meaningful and interpretable by a non-technical clinician</li>
+<li>A <strong>gradient-boosted tree model (LightGBM)</strong> trained on aggregated, ontology-based event counts — effective at capturing nonlinear interactions in tabular clinical features.</li>
+<li>A <strong>transformer-based sequence model</strong> trained directly on longitudinal clinical event sequences, producing contextual patient embeddings that capture how a patient’s history unfolds over time.</li>
 </ul>
-<hr>
+<p>Both paths were designed with leakage-free, patient-level data splits and a temporal offset between recorded history and prediction time.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/ehr_model_pipeline.png" class="img-fluid figure-img"></p>
+<figcaption>Dual-track EHR pipeline: tabular features feed a gradient-boosted model, while raw event sequences feed a transformer encoder that produces patient embeddings.</figcaption>
+</figure>
+</div>
 </section>
-<section id="success-criteria" class="level2">
-<h2 class="anchored" data-anchor-id="success-criteria">Success Criteria</h2>
+<section id="imaging-modeling" class="level3">
+<h3 class="anchored" data-anchor-id="imaging-modeling">Imaging Modeling</h3>
+<p>Medical imaging studies were processed through a slice-based encoder followed by a sequential aggregation model (bidirectional LSTM) to produce a single per-patient risk score. Imaging features were extracted using a pretrained convolutional backbone and aggregated across hundreds of image slices per study.</p>
+</section>
+<section id="fusion-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="fusion-strategies">Fusion Strategies</h3>
+<p>We evaluated two ways of combining imaging and EHR signals:</p>
+<ol type="1">
+<li><p><strong>Late fusion (stacking):</strong> independent model outputs from each modality are combined via logistic regression, allowing systematic comparison of single-modality, pairwise, and full multimodal configurations.</p></li>
+<li><p><strong>Cascaded fusion (feature-level integration):</strong> imaging-derived risk scores are injected directly as a feature into the tabular EHR pipeline, allowing a downstream model to learn nonlinear interactions between imaging and clinical variables natively.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/cascaded_fusion_diagram.png" class="img-fluid figure-img"></p>
+<figcaption>Cascaded fusion: an imaging-derived risk score is merged into the EHR feature matrix, then combined with the sequence model’s output via late fusion to produce the final prediction.</figcaption>
+</figure>
+</div>
+<p>No single fusion strategy dominated across every clinical task — the EHR-only models were consistently strong, and feature-level (cascaded) integration of imaging signal tended to outperform decision-level fusion, suggesting that <em>how</em> modalities are combined matters as much as <em>whether</em> they’re combined at all.</p>
+</section>
+<section id="interpretability" class="level3">
+<h3 class="anchored" data-anchor-id="interpretability">Interpretability</h3>
+<p>Because the project’s primary stakeholder cared as much about <em>why</em> a model made a prediction as the prediction itself, explainability was built into the pipeline rather than added after the fact. Techniques used included:</p>
 <ul>
-<li><strong>AUROC ≥ 0.90</strong> across all prediction horizons on the held-out test set</li>
-<li><strong>AUPRC ≥ 0.50</strong> to demonstrate robust performance despite class imbalance</li>
-<li>Full pipeline reproducible from a single command in the GitHub repository</li>
-<li>Partner sign-off on clinical interpretability</li>
+<li><strong>TreeSHAP</strong> values to identify which clinical features drove individual gradient-boosted model predictions, with features mapped back to human-readable clinical concepts.</li>
+<li><strong>Integrated Gradients and embedding probing</strong> to interpret the transformer-based sequence model’s hidden representations.</li>
+<li><strong>Grad-CAM and slice-importance analysis</strong> on the imaging model, to surface which regions of a scan most influenced a prediction.</li>
+<li>A <strong>censoring/lookback analysis</strong> that systematically restricted how much patient history a model could see, in order to measure how predictive performance degrades as historical context shrinks.</li>
 </ul>
+<p>The specific outputs of these analyses (e.g.&nbsp;SHAP plots, Grad-CAM heatmaps) are part of the project’s private deliverables and aren’t included here, but the methodology itself is described above.</p>
+</section>
+</section>
+<section id="data-product" class="level2">
+<h2 class="anchored" data-anchor-id="data-product">Data Product</h2>
+<p>Rather than building a standalone dashboard, we delivered a cloud-based, queryable pipeline: every model run, prediction, and explainability output is logged and stored so that our research partner’s team can query results directly and extend the pipeline to new datasets without rebuilding infrastructure from scratch. The emphasis throughout was on reproducibility and modularity — each pipeline component (imaging featurization, EHR modeling, fusion, explainability) can be rerun or swapped independently.</p>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>EHR-based models were consistently strong predictors of mortality and readmission risk on their own.</li>
+<li>Imaging signal added the most value when integrated at the feature level rather than the decision level.</li>
+<li>No single fusion configuration was best across every task — the right approach depends on the specific clinical question being asked.</li>
+<li>Building interpretability into the pipeline from the start (rather than retrofitting it) made the results far more actionable for clinical stakeholders.</li>
+</ul>
+</section>
+<section id="future-directions" class="level2">
+<h2 class="anchored" data-anchor-id="future-directions">Future Directions</h2>
+<p>Recommended next steps include evaluating the full dataset at scale, restricting model inputs to information available earlier in a patient’s care pathway to improve real-world deployment practicality, completing the historical-lookback experiments at full scale, and containerizing the pipeline to improve reproducibility for future projects.</p>
 
 
 </section>
