@@ -12,7 +12,7 @@ Data Science graduate student at the University of British Columbia with experie
 ## SKILLS
 * **Languages & Databases:** Python, SQL, R, Bash, Git
 * **Data Science & Machine Learning:** Pandas, NumPy, Scikit-learn, XGBoost, TensorFlow, PyTorch, feature engineering, supervised & unsupervised learning, deep learning, model evaluation, cross-validation, hyperparameter tuning
-* **LLM Technologies:**: OpenAI API, LangChain, FAISS, RAG Pipelines, Prompt Engineering, Vector Search, Embedding Models, Tool Calling, LLM Evaluation
+* **LLM Technologies:** OpenAI API, LangChain, FAISS, RAG Pipelines, Prompt Engineering, Vector Search, Embedding Models, Tool Calling, LLM Evaluation
 * **Data Engineering & Cloud:** GCP (Vertex AI, GCS, GCE), AWS, DuckDB, PyArrow, Docker, CI/CD, GitHub Actions, data pipelines, workflow automation, data validation, QA/testing
 * **Statistics:** Hypothesis testing, regression modeling, Bayesian inference, experimental design, causal inference, A/B testing, time series analysis
 * **Data Visualization & Reporting:** Matplotlib, Seaborn, Tableau, Shiny, PowerPoint, Excel
@@ -59,7 +59,7 @@ Data Science graduate student at the University of British Columbia with experie
 - Built an interactive dashboard enabling segmentation, filtering, and trend analysis across multiple dimensions
 - Implemented natural-language querying functionality to support self-service analytics and insight generation
 
-**SurveyCleaner Python Package** | Production ML data-cleaning library with full MLOps pipeline | [TestPyPI](https://test.pypi.org/project/survey-cleaner/) • [Github](https://github.com/UBC-MDS/DSCI_524_group35_survey_cleaner)
+**SurveyCleaner Python Package** | Production ML data-cleaning library with full MLOps pipeline | [TestPyPI](https://test.pypi.org/project/survey-cleaner/) • [GitHub](https://github.com/UBC-MDS/DSCI_524_group35_survey_cleaner)
 
 - Designed and implemented a Python package for automated data cleaning, validation, and preprocessing workflows
 - Built a comprehensive Pytest framework achieving 100% test coverage across validation scenarios and edge cases
