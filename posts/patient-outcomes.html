@@ -2,22 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-06-01">
+<meta name="dcterms.date" content="2026-06-25">
 <meta name="description" content="Predicting mortality and readmission by combining 3D CT imaging with structured EHR data. UBC MDS Capstone in partnership with Tandem Research.">
 
-<title>Multimodal Patient Outcome Prediction – Natalie Truesdell</title>
+<title>Multimodal AI for Clinical Risk Prediction – Natalie Truesdell</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b4cd8a18951cacdbfe24ef27260e3a50.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6911c0630a451c793627f53c881ebdbe.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -138,12 +141,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Multimodal Patient Outcome Prediction</h1>
+<h1 class="title">Multimodal AI for Clinical Risk Prediction</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">machine learning</div>
-    <div class="quarto-category">healthcare</div>
     <div class="quarto-category">multimodal</div>
-    <div class="quarto-category">explainability</div>
+    <div class="quarto-category">computer vision</div>
+    <div class="quarto-category">deep learning</div>
+    <div class="quarto-category">explainable AI</div>
   </div>
   </div>
 
@@ -160,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 1, 2026</p>
+      <p class="date">June 25, 2026</p>
     </div>
   </div>
   
@@ -182,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This project was completed as part of my Master’s capstone in partnership with <strong>Tandem Research</strong>. Tandem partners with healthcare organizations on applied data science initiatives, and some details of this project — including the specific clinical dataset used, exact performance results, and certain visual outputs (e.g.&nbsp;model explainability figures) — are private and protected under a non-disclosure agreement. This post describes the methodology, modeling approach, and high-level findings at a level appropriate for public sharing.</p>
+<p>This project was completed as part of my Master’s capstone in partnership with <strong>Tandem Research</strong>, where I led a four-person team through the full pipeline design, EHR/GBM modeling, fusion strategy, and infrastructure. Tandem partners with healthcare organizations on applied data science initiatives, and some details of this project — including the specific clinical dataset used, exact performance results, and certain visual outputs (e.g.&nbsp;model explainability figures) — are private and protected under a non-disclosure agreement. This post describes the methodology, modeling approach, and high-level findings at a level appropriate for public sharing.</p>
 </div>
 </div>
 <section id="overview" class="level2">
@@ -211,10 +214,13 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Dual-track EHR pipeline: tabular features feed a gradient-boosted model, while raw event sequences feed a transformer encoder that produces patient embeddings.</figcaption>
 </figure>
 </div>
+<p>To understand how sensitive each model is to the amount of history it has access to, we ran a <strong>lookback-window experiment</strong>, retraining both LightGBM and the transformer under restricted history windows (1 year, 5 years, 10 years, and full available history) and evaluating performance across all downstream tasks. This was paired with a <strong>SHAP-based domain analysis</strong> that aggregated feature attributions by clinical domain (e.g.&nbsp;conditions, medications, procedures) to see how the relative importance of different types of clinical evidence shifts as available history shrinks — a proxy for how the model would behave on patients with fragmented or incomplete records, a common real-world scenario.</p>
 </section>
 <section id="imaging-modeling" class="level3">
 <h3 class="anchored" data-anchor-id="imaging-modeling">Imaging Modeling</h3>
-<p>Medical imaging studies were processed through a slice-based encoder followed by a sequential aggregation model (bidirectional LSTM) to produce a single per-patient risk score. Imaging features were extracted using a pretrained convolutional backbone and aggregated across hundreds of image slices per study.</p>
+<p>Medical imaging studies were processed through a slice-based encoder followed by a sequential aggregation model to produce a single per-patient risk score.</p>
+<p>Each CT volume’s axial slices were rendered as three clinically-relevant HU windows stacked as RGB channels, then passed through a pretrained ResNetV2 convolutional backbone to extract a per-slice feature vector. Features were cached to disk so the expensive convolutional pass only needed to run once per scan, decoupling it from downstream experimentation. Per-scan feature sequences were padded or truncated to a fixed length, with an accompanying mask and a positional feature encoding each slice’s physical depth, before being passed into a recurrent sequence model (LSTM/GRU, with a Transformer variant also supported) that aggregated across slices into a single risk score per study.</p>
+<p>Training used mixed-precision (bfloat16) to keep the large per-slice feature dimensionality numerically stable, weighted sampling to address class imbalance across the low-prevalence clinical outcomes, and resumable checkpointing so long-running training jobs could survive interruption on cloud compute without losing progress.</p>
 </section>
 <section id="fusion-strategies" class="level3">
 <h3 class="anchored" data-anchor-id="fusion-strategies">Fusion Strategies</h3>
@@ -235,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="interpretability">Interpretability</h3>
 <p>Because the project’s primary stakeholder cared as much about <em>why</em> a model made a prediction as the prediction itself, explainability was built into the pipeline rather than added after the fact. Techniques used included:</p>
 <ul>
-<li><strong>TreeSHAP</strong> values to identify which clinical features drove individual gradient-boosted model predictions, with features mapped back to human-readable clinical concepts.</li>
+<li><strong>TreeSHAP</strong> values to identify which clinical features drove individual gradient-boosted model predictions, with features mapped back to human-readable clinical concepts, and aggregated by clinical domain to compare contribution patterns across tasks and lookback windows.</li>
 <li><strong>Integrated Gradients and embedding probing</strong> to interpret the transformer-based sequence model’s hidden representations.</li>
 <li><strong>Grad-CAM and slice-importance analysis</strong> on the imaging model, to surface which regions of a scan most influenced a prediction.</li>
 <li>A <strong>censoring/lookback analysis</strong> that systematically restricted how much patient history a model could see, in order to measure how predictive performance degrades as historical context shrinks.</li>

@@ -1,159 +1,5 @@
 [
   {
-    "objectID": "resume.html",
-    "href": "resume.html",
-    "title": "Resume",
-    "section": "",
-    "text": "Vancouver, BC • natalieetruesdell@gmail.com • 858-705-8644 • LinkedIn • GitHub • Portfolio\n\n\nData Science graduate student at the University of British Columbia with experience developing machine learning models, building scalable data pipelines, and performing statistical analysis on large-scale datasets. Skilled in Python, SQL, data visualization, feature engineering, and predictive modeling. Experienced communicating technical findings to diverse stakeholders through reports, dashboards, and presentations. Passionate about applying data-driven solutions to real-world engineering and operational challenges.\n\n\n\n\nLanguages & Databases: Python, SQL, R, Bash, Git\nData Science & Machine Learning: Pandas, NumPy, Scikit-learn, XGBoost, TensorFlow, PyTorch, feature engineering, supervised & unsupervised learning, deep learning, model evaluation, cross-validation, hyperparameter tuning\nLLM Technologies: OpenAI API, LangChain, FAISS, RAG Pipelines, Prompt Engineering, Vector Search, Embedding Models, Tool Calling, LLM Evaluation\nData Engineering & Cloud: GCP (Vertex AI, GCS, GCE), AWS, DuckDB, PyArrow, Docker, CI/CD, GitHub Actions, data pipelines, workflow automation, data validation, QA/testing\nStatistics: Hypothesis testing, regression modeling, Bayesian inference, experimental design, causal inference, A/B testing, time series analysis\nData Visualization & Reporting: Matplotlib, Seaborn, Tableau, Shiny, PowerPoint, Excel\n\n\n\n\nUniversity of British Columbia, Vancouver | Master of Data Science | Aug 2025 – Jun 2026\n\nCumulative Average: 92%\n\nUniversity of California, San Diego | B.S. Business Economics, Minor in Data Analytics | Sept 2020 – Jun 2025\n\nGPA: 3.6/4.0\n\n\n\n\nData Analytics Intern | Acorn Evaluation, Inc. | Jan 2025 – Jul 2025\n\nExtracted, cleaned, and transformed multi-source datasets (30K+ records) using reproducible Python workflows\nDeveloped a Python-based web scraping and parsing pipeline to transform unstructured data from 200+ program websites into an analysis-ready dataset\nMaintained and validated interactive Tableau dashboards for 5+ clients to monitor program metrics and support operational decision-making\nImplemented anomaly detection and data QA processes, identifying inconsistencies across datasets and improving standardization and reusability across reporting workflows\n\nAccounting Intern | Lohman & Associates | Jun 2024 – Nov 2024\n\nAnalyzed financial and operational datasets to produce weekly Excel reports on revenue forecasts and team KPIs\nIdentified and resolved data discrepancies, improving accuracy, consistency, and standardization of reporting workflows\n\n\n\n\nSmart Amazon Product Query | LLM-powered Retrieval and Evaluation System | GitHub\n\nBuilt a scalable retrieval system over 2.5M+ records using hybrid search (BM25 + FAISS embeddings)\nDeveloped an LLM-powered RAG pipeline with prompt engineering, grounding guardrails, and source attribution to improve recommendation reliability and reduce hallucinations\nOptimized large-scale data querying using DuckDB and Parquet-based processing for low-latency analytics workflows\n\nMultimodal Patient Outcome Prediction | UBC MDS Capstone · Predictive modeling pipeline\n\nDesigned an end-to-end predictive modeling pipeline integrating 3D CT imaging with high-volume EHR data (225M+ rows) to predict patient mortality and hospital readmission\nInvestigated model outputs using feature importance and explainability methods, including Grad-CAM heatmaps and slice-level gradient attribution to identify key clinical regions and quantify their contribution to predictions\nStreamlined data ingestion using DuckDB and PyArrow for efficient GCP bucket querying and managed the full model lifecycle and metadata tracking via Vertex AI Experiment Tracking\nPresented modeling results and performance tradeoffs to clinical stakeholders, translating technical findings into actionable recommendations\n\nNYC Squirrel Behavior Dashboard | Interactive analytics dashboard for behavioral insights | Dashboard • GitHub\n\nConducted exploratory analysis on behavioral and geographic patterns within a large public dataset\nBuilt an interactive dashboard enabling segmentation, filtering, and trend analysis across multiple dimensions\nImplemented natural-language querying functionality to support self-service analytics and insight generation\n\nSurveyCleaner Python Package | Production ML data-cleaning library with full MLOps pipeline | TestPyPI • GitHub\n\nDesigned and implemented a Python package for automated data cleaning, validation, and preprocessing workflows\nBuilt a comprehensive Pytest framework achieving 100% test coverage across validation scenarios and edge cases\nDeveloped CI/CD workflows using GitHub Actions for automated testing, versioning, and deployment to TestPyPI\n\n\n\n  Download PDF Version"
-  },
-  {
-    "objectID": "resume.html#summary",
-    "href": "resume.html#summary",
-    "title": "Resume",
-    "section": "",
-    "text": "Data Science graduate student at the University of British Columbia with experience developing machine learning models, building scalable data pipelines, and performing statistical analysis on large-scale datasets. Skilled in Python, SQL, data visualization, feature engineering, and predictive modeling. Experienced communicating technical findings to diverse stakeholders through reports, dashboards, and presentations. Passionate about applying data-driven solutions to real-world engineering and operational challenges."
-  },
-  {
-    "objectID": "resume.html#skills",
-    "href": "resume.html#skills",
-    "title": "Resume",
-    "section": "",
-    "text": "Languages & Databases: Python, SQL, R, Bash, Git\nData Science & Machine Learning: Pandas, NumPy, Scikit-learn, XGBoost, TensorFlow, PyTorch, feature engineering, supervised & unsupervised learning, deep learning, model evaluation, cross-validation, hyperparameter tuning\nLLM Technologies: OpenAI API, LangChain, FAISS, RAG Pipelines, Prompt Engineering, Vector Search, Embedding Models, Tool Calling, LLM Evaluation\nData Engineering & Cloud: GCP (Vertex AI, GCS, GCE), AWS, DuckDB, PyArrow, Docker, CI/CD, GitHub Actions, data pipelines, workflow automation, data validation, QA/testing\nStatistics: Hypothesis testing, regression modeling, Bayesian inference, experimental design, causal inference, A/B testing, time series analysis\nData Visualization & Reporting: Matplotlib, Seaborn, Tableau, Shiny, PowerPoint, Excel"
-  },
-  {
-    "objectID": "resume.html#education",
-    "href": "resume.html#education",
-    "title": "Resume",
-    "section": "",
-    "text": "University of British Columbia, Vancouver | Master of Data Science | Aug 2025 – Jun 2026\n\nCumulative Average: 92%\n\nUniversity of California, San Diego | B.S. Business Economics, Minor in Data Analytics | Sept 2020 – Jun 2025\n\nGPA: 3.6/4.0"
-  },
-  {
-    "objectID": "resume.html#experience",
-    "href": "resume.html#experience",
-    "title": "Resume",
-    "section": "",
-    "text": "Data Analytics Intern | Acorn Evaluation, Inc. | Jan 2025 – Jul 2025\n\nExtracted, cleaned, and transformed multi-source datasets (30K+ records) using reproducible Python workflows\nDeveloped a Python-based web scraping and parsing pipeline to transform unstructured data from 200+ program websites into an analysis-ready dataset\nMaintained and validated interactive Tableau dashboards for 5+ clients to monitor program metrics and support operational decision-making\nImplemented anomaly detection and data QA processes, identifying inconsistencies across datasets and improving standardization and reusability across reporting workflows\n\nAccounting Intern | Lohman & Associates | Jun 2024 – Nov 2024\n\nAnalyzed financial and operational datasets to produce weekly Excel reports on revenue forecasts and team KPIs\nIdentified and resolved data discrepancies, improving accuracy, consistency, and standardization of reporting workflows"
-  },
-  {
-    "objectID": "resume.html#projects",
-    "href": "resume.html#projects",
-    "title": "Resume",
-    "section": "",
-    "text": "Smart Amazon Product Query | LLM-powered Retrieval and Evaluation System | GitHub\n\nBuilt a scalable retrieval system over 2.5M+ records using hybrid search (BM25 + FAISS embeddings)\nDeveloped an LLM-powered RAG pipeline with prompt engineering, grounding guardrails, and source attribution to improve recommendation reliability and reduce hallucinations\nOptimized large-scale data querying using DuckDB and Parquet-based processing for low-latency analytics workflows\n\nMultimodal Patient Outcome Prediction | UBC MDS Capstone · Predictive modeling pipeline\n\nDesigned an end-to-end predictive modeling pipeline integrating 3D CT imaging with high-volume EHR data (225M+ rows) to predict patient mortality and hospital readmission\nInvestigated model outputs using feature importance and explainability methods, including Grad-CAM heatmaps and slice-level gradient attribution to identify key clinical regions and quantify their contribution to predictions\nStreamlined data ingestion using DuckDB and PyArrow for efficient GCP bucket querying and managed the full model lifecycle and metadata tracking via Vertex AI Experiment Tracking\nPresented modeling results and performance tradeoffs to clinical stakeholders, translating technical findings into actionable recommendations\n\nNYC Squirrel Behavior Dashboard | Interactive analytics dashboard for behavioral insights | Dashboard • GitHub\n\nConducted exploratory analysis on behavioral and geographic patterns within a large public dataset\nBuilt an interactive dashboard enabling segmentation, filtering, and trend analysis across multiple dimensions\nImplemented natural-language querying functionality to support self-service analytics and insight generation\n\nSurveyCleaner Python Package | Production ML data-cleaning library with full MLOps pipeline | TestPyPI • GitHub\n\nDesigned and implemented a Python package for automated data cleaning, validation, and preprocessing workflows\nBuilt a comprehensive Pytest framework achieving 100% test coverage across validation scenarios and edge cases\nDeveloped CI/CD workflows using GitHub Actions for automated testing, versioning, and deployment to TestPyPI\n\n\n\n  Download PDF Version"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
-    "section": "",
-    "text": "I’m a data scientist with a background in business economics and a passion for building ML systems that are rigorous, reproducible, and useful.\nAvailable to start: July 15, 2026 · Vancouver, BC · natalieetruesdell@gmail.com"
-  },
-  {
-    "objectID": "about.html#skills",
-    "href": "about.html#skills",
-    "title": "About Me",
-    "section": "Skills",
-    "text": "Skills\nLanguages & Tools: Python, R, SQL, Bash, Git, Docker\nMachine Learning: Pandas, NumPy, Scikit-learn, XGBoost, TensorFlow, PyTorch, feature engineering, supervised & unsupervised learning, deep learning, model evaluation, cross-validation, hyperparameter tuning\nLLM Technologies: OpenAI API, LangChain, FAISS, RAG Pipelines, Prompt Engineering, Vector Search, Embedding Models, Tool Calling, LLM Evaluation\nData Engineering & Cloud: GCP (Vertex AI, GCS, GCE), AWS, PyArrow, CI/CD, GitHub Actions, data pipelines, workflow automation, data validation, QA/testing\nStatistics: Hypothesis testing, regression modeling, Bayesian inference, experimental design, causal inference, A/B testing, time series analysis"
-  },
-  {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "About Me",
-    "section": "Education",
-    "text": "Education\nMaster of Data Science — UBC Vancouver Aug 2025 – Jun 2026\nCumulative Average: 92%\nCoursework: Machine Learning, Deep Learning, NLP, Cloud Computing, Causal Inference, Spatial & Temporal Models, A/B Testing\nB.S. Business Economics, Minor in Data Analytics — UC San Diego\nSept 2020 – Jun 2025\nGPA: 3.6 / 4.0"
-  },
-  {
-    "objectID": "posts/squirrel-dashboard.html",
-    "href": "posts/squirrel-dashboard.html",
-    "title": "NYC Squirrel Census Dashboard",
-    "section": "",
-    "text": "An interactive data visualization dashboard for exploring behavioral patterns and spatial distributions of squirrels in New York City’s Central Park, built using the 2018 Central Park Squirrel Census.\nLive App · GitHub"
-  },
-  {
-    "objectID": "posts/squirrel-dashboard.html#overview",
-    "href": "posts/squirrel-dashboard.html#overview",
-    "title": "NYC Squirrel Census Dashboard",
-    "section": "",
-    "text": "An interactive data visualization dashboard for exploring behavioral patterns and spatial distributions of squirrels in New York City’s Central Park, built using the 2018 Central Park Squirrel Census.\nLive App · GitHub"
-  },
-  {
-    "objectID": "posts/squirrel-dashboard.html#what-the-dashboard-does",
-    "href": "posts/squirrel-dashboard.html#what-the-dashboard-does",
-    "title": "NYC Squirrel Census Dashboard",
-    "section": "What the Dashboard Does",
-    "text": "What the Dashboard Does\nThe app has two tabs:\nMap tab — a Folium map of all sightings with a sidebar to filter by shift (AM/PM), fur color, age, and behavior. Three Altair bar charts update alongside the map showing fur color counts, shift counts, and top 5 behaviors. A downloadable data table sits below.\nAI Analysis tab — a natural language chat interface powered by GPT-4.1 via querychat. Ask questions like “show only gray squirrels that were foraging” and the charts and table update to reflect the filtered result."
-  },
-  {
-    "objectID": "posts/squirrel-dashboard.html#architecture",
-    "href": "posts/squirrel-dashboard.html#architecture",
-    "title": "NYC Squirrel Census Dashboard",
-    "section": "Architecture",
-    "text": "Architecture\nData is preprocessed once into a Parquet file and a GeoJSON file, then queried at runtime with DuckDB — keeping the app fast without loading the full dataset into memory on every filter change.\ncon = duckdb.connect()\ncon.execute(f\"CREATE VIEW squirrels AS SELECT * FROM read_parquet('{OUT_PAR}')\")\nFiltering is driven by a single reactive DuckDB query that builds a WHERE clause from the sidebar inputs:\n@reactive.calc\ndef filtered_df() -&gt; pd.DataFrame:\n    conditions = []\n    if selected_shift:\n        conditions.append(f\"shift IN ({placeholders})\")\n    if selected_fur:\n        conditions.append(f\"primary_fur_color IN ({placeholders})\")\n    if valid_behavior:\n        conditions.append(f\"({' OR '.join(f'{c} = TRUE' for c in valid_behavior)})\")\n\n    where = f\"WHERE {' AND '.join(conditions)}\" if conditions else \"\"\n    return con.execute(f\"SELECT ... FROM squirrels {where}\").df()\nThe Folium map renders inside an &lt;iframe&gt; using srcdoc, with a custom HTML/JS legend that syncs fur color selections back to Shiny via Shiny.setInputValue.\nCharts are built with Altair and embedded using vegaEmbed rather than Shiny’s default rendering, which allows width=\"container\" to make them fully responsive."
-  },
-  {
-    "objectID": "posts/squirrel-dashboard.html#ai-chat-integration",
-    "href": "posts/squirrel-dashboard.html#ai-chat-integration",
-    "title": "NYC Squirrel Census Dashboard",
-    "section": "AI Chat Integration",
-    "text": "AI Chat Integration\nThe chat tab uses querychat with a ChatGithub client (GPT-4.1). The model translates natural language into filtered DataFrames, which then drive the same chart and table components used in the map tab.\nqc = QueryChat(\n    _chat_base_df,\n    \"squirrels\",\n    client=ChatGithub(model=\"gpt-4.1\"),\n)"
-  },
-  {
-    "objectID": "posts/squirrel-dashboard.html#testing",
-    "href": "posts/squirrel-dashboard.html#testing",
-    "title": "NYC Squirrel Census Dashboard",
-    "section": "Testing",
-    "text": "Testing\nUnit tests with pytest cover data processing logic; end-to-end dashboard behavior is verified with Playwright:\npip install pytest-playwright\nplaywright install\npytest tests/"
-  },
-  {
-    "objectID": "posts/squirrel-dashboard.html#what-i-learned",
-    "href": "posts/squirrel-dashboard.html#what-i-learned",
-    "title": "NYC Squirrel Census Dashboard",
-    "section": "What I Learned",
-    "text": "What I Learned\n\nDuckDB as a query layer over Parquet is a clean pattern for dashboard backends — filtering stays fast and the query logic is easy to read and test\nEmbedding Folium inside a Shiny iframe works well but requires careful JS bridging to push legend clicks back into Shiny’s reactive graph\nquerychat abstracts a lot of the LLM-to-dataframe plumbing, but prompt design still matters — the greeting suggestions meaningfully improved the quality of first queries from users unfamiliar with the data"
-  },
-  {
-    "objectID": "posts/patient-outcomes.html",
-    "href": "posts/patient-outcomes.html",
-    "title": "Multimodal Patient Outcome Prediction",
-    "section": "",
-    "text": "NoteProject Context\n\n\n\nThis project was completed as part of my Master’s capstone in partnership with Tandem Research. Tandem partners with healthcare organizations on applied data science initiatives, and some details of this project — including the specific clinical dataset used, exact performance results, and certain visual outputs (e.g. model explainability figures) — are private and protected under a non-disclosure agreement. This post describes the methodology, modeling approach, and high-level findings at a level appropriate for public sharing."
-  },
-  {
-    "objectID": "posts/patient-outcomes.html#overview",
-    "href": "posts/patient-outcomes.html#overview",
-    "title": "Multimodal Patient Outcome Prediction",
-    "section": "Overview",
-    "text": "Overview\nClinicians often lack reliable tools to identify which patients are at the highest risk of death or hospital readmission following a serious diagnosis. Most existing machine learning approaches in healthcare rely on a single data source — either structured electronic health records (EHR) or medical imaging — but rarely combine both. This means models built on a single modality may miss important context available elsewhere in a patient’s record.\nWorking with a healthcare-focused research partner, our team set out to answer:\n\nHow can structured EHR data and 3D medical imaging be combined into a multimodal machine learning framework to predict patient mortality and hospital readmission?\n\nWe built a reproducible, end-to-end pipeline that integrates tabular clinical history with volumetric imaging data, explored multiple ways of fusing those signals together, and prioritized interpretability throughout, since our partner’s goal was a research tool that clinicians and data scientists could trust and build on, not a black box."
-  },
-  {
-    "objectID": "posts/patient-outcomes.html#approach",
-    "href": "posts/patient-outcomes.html#approach",
-    "title": "Multimodal Patient Outcome Prediction",
-    "section": "Approach",
-    "text": "Approach\n\nEHR Modeling\nBefore modeling, raw clinical history goes through a standardized preprocessing pipeline: cohorts are defined, records are standardized into a common data format, outcome labels are aligned to a fixed prediction window with a temporal offset to avoid leakage, and patient features are constructed.\nStructured clinical history was modeled two complementary ways:\n\nA gradient-boosted tree model (LightGBM) trained on aggregated, ontology-based event counts — effective at capturing nonlinear interactions in tabular clinical features.\nA transformer-based sequence model trained directly on longitudinal clinical event sequences, producing contextual patient embeddings that capture how a patient’s history unfolds over time.\n\nBoth paths were designed with leakage-free, patient-level data splits and a temporal offset between recorded history and prediction time.\n\n\n\nDual-track EHR pipeline: tabular features feed a gradient-boosted model, while raw event sequences feed a transformer encoder that produces patient embeddings.\n\n\n\n\nImaging Modeling\nMedical imaging studies were processed through a slice-based encoder followed by a sequential aggregation model (bidirectional LSTM) to produce a single per-patient risk score. Imaging features were extracted using a pretrained convolutional backbone and aggregated across hundreds of image slices per study.\n\n\nFusion Strategies\nWe evaluated two ways of combining imaging and EHR signals:\n\nLate fusion (stacking): independent model outputs from each modality are combined via logistic regression, allowing systematic comparison of single-modality, pairwise, and full multimodal configurations.\nCascaded fusion (feature-level integration): imaging-derived risk scores are injected directly as a feature into the tabular EHR pipeline, allowing a downstream model to learn nonlinear interactions between imaging and clinical variables natively.\n\n\n\n\nCascaded fusion: an imaging-derived risk score is merged into the EHR feature matrix, then combined with the sequence model’s output via late fusion to produce the final prediction.\n\n\nNo single fusion strategy dominated across every clinical task — the EHR-only models were consistently strong, and feature-level (cascaded) integration of imaging signal tended to outperform decision-level fusion, suggesting that how modalities are combined matters as much as whether they’re combined at all.\n\n\nInterpretability\nBecause the project’s primary stakeholder cared as much about why a model made a prediction as the prediction itself, explainability was built into the pipeline rather than added after the fact. Techniques used included:\n\nTreeSHAP values to identify which clinical features drove individual gradient-boosted model predictions, with features mapped back to human-readable clinical concepts.\nIntegrated Gradients and embedding probing to interpret the transformer-based sequence model’s hidden representations.\nGrad-CAM and slice-importance analysis on the imaging model, to surface which regions of a scan most influenced a prediction.\nA censoring/lookback analysis that systematically restricted how much patient history a model could see, in order to measure how predictive performance degrades as historical context shrinks.\n\nThe specific outputs of these analyses (e.g. SHAP plots, Grad-CAM heatmaps) are part of the project’s private deliverables and aren’t included here, but the methodology itself is described above."
-  },
-  {
-    "objectID": "posts/patient-outcomes.html#data-product",
-    "href": "posts/patient-outcomes.html#data-product",
-    "title": "Multimodal Patient Outcome Prediction",
-    "section": "Data Product",
-    "text": "Data Product\nRather than building a standalone dashboard, we delivered a cloud-based, queryable pipeline: every model run, prediction, and explainability output is logged and stored so that our research partner’s team can query results directly and extend the pipeline to new datasets without rebuilding infrastructure from scratch. The emphasis throughout was on reproducibility and modularity — each pipeline component (imaging featurization, EHR modeling, fusion, explainability) can be rerun or swapped independently."
-  },
-  {
-    "objectID": "posts/patient-outcomes.html#key-takeaways",
-    "href": "posts/patient-outcomes.html#key-takeaways",
-    "title": "Multimodal Patient Outcome Prediction",
-    "section": "Key Takeaways",
-    "text": "Key Takeaways\n\nEHR-based models were consistently strong predictors of mortality and readmission risk on their own.\nImaging signal added the most value when integrated at the feature level rather than the decision level.\nNo single fusion configuration was best across every task — the right approach depends on the specific clinical question being asked.\nBuilding interpretability into the pipeline from the start (rather than retrofitting it) made the results far more actionable for clinical stakeholders."
-  },
-  {
-    "objectID": "posts/patient-outcomes.html#future-directions",
-    "href": "posts/patient-outcomes.html#future-directions",
-    "title": "Multimodal Patient Outcome Prediction",
-    "section": "Future Directions",
-    "text": "Future Directions\nRecommended next steps include evaluating the full dataset at scale, restricting model inputs to information available earlier in a patient’s care pathway to improve real-world deployment practicality, completing the historical-lookback experiments at full scale, and containerizing the pipeline to improve reproducibility for future projects."
-  },
-  {
     "objectID": "experience.html",
     "href": "experience.html",
     "title": "Experience",
@@ -177,133 +23,287 @@
   {
     "objectID": "posts/survey-cleaner.html",
     "href": "posts/survey-cleaner.html",
-    "title": "SurveyCleaner Python Package",
+    "title": "SurveyCleaner: Production Data Validation and Cleaning Package",
     "section": "",
     "text": "A lightweight, open-source Python package for cleaning and preprocessing survey data, built through the full development lifecycle — from API design and test-driven development to CI/CD automation and distribution on TestPyPI.\nTestPyPI · GitHub · Docs"
   },
   {
     "objectID": "posts/survey-cleaner.html#overview",
     "href": "posts/survey-cleaner.html#overview",
-    "title": "SurveyCleaner Python Package",
+    "title": "SurveyCleaner: Production Data Validation and Cleaning Package",
     "section": "",
     "text": "A lightweight, open-source Python package for cleaning and preprocessing survey data, built through the full development lifecycle — from API design and test-driven development to CI/CD automation and distribution on TestPyPI.\nTestPyPI · GitHub · Docs"
   },
   {
     "objectID": "posts/survey-cleaner.html#the-problem",
     "href": "posts/survey-cleaner.html#the-problem",
-    "title": "SurveyCleaner Python Package",
+    "title": "SurveyCleaner: Production Data Validation and Cleaning Package",
     "section": "The Problem",
     "text": "The Problem\nSurvey data is messy in predictable ways: duplicate responses from the same respondent, inconsistent whitespace, binary answers recorded as “Yes”/“No” or “True”/“False”, and ordinal responses stored as words instead of numbers. Most teams handle this with one-off scripts that aren’t reusable or tested. SurveyCleaner provides a consistent, well-tested API for the most common survey cleaning tasks."
   },
   {
     "objectID": "posts/survey-cleaner.html#functions",
     "href": "posts/survey-cleaner.html#functions",
-    "title": "SurveyCleaner Python Package",
+    "title": "SurveyCleaner: Production Data Validation and Cleaning Package",
     "section": "Functions",
     "text": "Functions\n\nremove_duplicates — keeps only the latest response from each respondent\nhandle_emptyStrings — strips and collapses whitespace, handles None values\nnormalize_binary — converts Yes/No, True/False, T/F to 1/0\nword_to_ordinal — maps ranking words (or Likert scale text) to numeric values"
   },
   {
     "objectID": "posts/survey-cleaner.html#usage",
     "href": "posts/survey-cleaner.html#usage",
-    "title": "SurveyCleaner Python Package",
+    "title": "SurveyCleaner: Production Data Validation and Cleaning Package",
     "section": "Usage",
     "text": "Usage\n\nRemove Duplicate Responses\nfrom survey_cleaner import remove_duplicates\n\nresponses = pd.DataFrame({\n    'respondent_id': [1, 2, 1, 3],\n    'completed_at': ['2024-01-01 10:00', '2024-01-01 11:00',\n                     '2024-01-01 12:00', '2024-01-01 13:00'],\n    'answer': ['Yes', 'No', 'Maybe', 'Yes']\n})\n\nclean_responses = remove_duplicates(responses, 'respondent_id', 'completed_at')\n\n\nNormalize Binary Responses\nfrom survey_cleaner import normalize_binary\n\ndf = pd.DataFrame({'response': ['Yes', 'No', 'Yes']})\ndf['response'] = df['response'].apply(normalize_binary)\n# Result: [1, 0, 1]\n\n\nConvert Ordinal Responses to Numeric\nfrom survey_cleaner import word_to_ordinal\n\nfeedback = pd.Series([\"strongly agree\", \"agree\",\n                      \"neither agree nor disagree\", \"disagree\"])\n\n# Using built-in Likert scale\nword_to_ordinal(feedback, likert=\"agreement\")\n\n# Or provide a custom mapping\nword_to_ordinal(feedback, mapping={\"strongly agree\": 5, \"disagree\": 2})\n\n\nClean Whitespace\nfrom survey_cleaner import handle_emptyStrings\n\ndf['comments'] = df['comments'].apply(handle_emptyStrings)"
   },
   {
     "objectID": "posts/survey-cleaner.html#example",
     "href": "posts/survey-cleaner.html#example",
-    "title": "SurveyCleaner Python Package",
+    "title": "SurveyCleaner: Production Data Validation and Cleaning Package",
     "section": "Example",
     "text": "Example\n\n\n\nBefore and after: raw survey inputs transformed to clean numeric output"
   },
   {
     "objectID": "posts/survey-cleaner.html#cicd-pipeline",
     "href": "posts/survey-cleaner.html#cicd-pipeline",
-    "title": "SurveyCleaner Python Package",
+    "title": "SurveyCleaner: Production Data Validation and Cleaning Package",
     "section": "CI/CD Pipeline",
     "text": "CI/CD Pipeline\nFour automated workflows keep the package built, tested, and published:\n\n\n\n\n\n\n\n\nWorkflow\nTrigger\nPurpose\n\n\n\n\nbuild.yml\nPush/PR to main\nRuns tests and builds package\n\n\ndeploy.yml\nPush to main\nDeploys to TestPyPI after tests pass\n\n\nquartodoc.yml\nPush/PR to main\nBuilds API documentation\n\n\nquartodoc-publish.yml\nPush to main\nPublishes docs to GitHub Pages"
   },
   {
     "objectID": "posts/survey-cleaner.html#test-coverage",
     "href": "posts/survey-cleaner.html#test-coverage",
-    "title": "SurveyCleaner Python Package",
+    "title": "SurveyCleaner: Production Data Validation and Cleaning Package",
     "section": "Test Coverage",
     "text": "Test Coverage\nBuilt with test-driven development — tests were written before implementation for core functions. Final coverage: 100% across modules, tracked via Codecov.\n\n\n\nPytest coverage report"
   },
   {
     "objectID": "posts/survey-cleaner.html#installation",
     "href": "posts/survey-cleaner.html#installation",
-    "title": "SurveyCleaner Python Package",
+    "title": "SurveyCleaner: Production Data Validation and Cleaning Package",
     "section": "Installation",
     "text": "Installation\npip install --index-url https://test.pypi.org/simple/ \\\n            --extra-index-url https://pypi.org/simple/ \\\n            survey_cleaner"
   },
   {
     "objectID": "posts/survey-cleaner.html#what-i-learned",
     "href": "posts/survey-cleaner.html#what-i-learned",
-    "title": "SurveyCleaner Python Package",
+    "title": "SurveyCleaner: Production Data Validation and Cleaning Package",
     "section": "What I Learned",
     "text": "What I Learned\n\nDesigning a clean public API is harder than writing the implementation — early versions had unclear method signatures that we refactored based on usability testing with teammates\nCI/CD dramatically reduces maintenance overhead; after setup, releases were essentially one-click\nTest-driven development caught logic bugs before any code ran in production, particularly in the edge cases for normalize_binary and word_to_ordinal"
   },
   {
+    "objectID": "posts/squirrel-dashboard.html",
+    "href": "posts/squirrel-dashboard.html",
+    "title": "Geospatial Behavioral Analytics Dashboard",
+    "section": "",
+    "text": "An interactive data visualization dashboard for exploring behavioral patterns and spatial distributions of squirrels in New York City’s Central Park, built using the 2018 Central Park Squirrel Census.\nLive App · GitHub"
+  },
+  {
+    "objectID": "posts/squirrel-dashboard.html#overview",
+    "href": "posts/squirrel-dashboard.html#overview",
+    "title": "Geospatial Behavioral Analytics Dashboard",
+    "section": "",
+    "text": "An interactive data visualization dashboard for exploring behavioral patterns and spatial distributions of squirrels in New York City’s Central Park, built using the 2018 Central Park Squirrel Census.\nLive App · GitHub"
+  },
+  {
+    "objectID": "posts/squirrel-dashboard.html#what-the-dashboard-does",
+    "href": "posts/squirrel-dashboard.html#what-the-dashboard-does",
+    "title": "Geospatial Behavioral Analytics Dashboard",
+    "section": "What the Dashboard Does",
+    "text": "What the Dashboard Does\nThe app has two tabs:\nMap tab — a Folium map of all sightings with a sidebar to filter by shift (AM/PM), fur color, age, and behavior. Three Altair bar charts update alongside the map showing fur color counts, shift counts, and top 5 behaviors. A downloadable data table sits below.\nAI Analysis tab — a natural language chat interface powered by GPT-4.1 via querychat. Ask questions like “show only gray squirrels that were foraging” and the charts and table update to reflect the filtered result."
+  },
+  {
+    "objectID": "posts/squirrel-dashboard.html#architecture",
+    "href": "posts/squirrel-dashboard.html#architecture",
+    "title": "Geospatial Behavioral Analytics Dashboard",
+    "section": "Architecture",
+    "text": "Architecture\nData is preprocessed once into a Parquet file and a GeoJSON file, then queried at runtime with DuckDB — keeping the app fast without loading the full dataset into memory on every filter change.\ncon = duckdb.connect()\ncon.execute(f\"CREATE VIEW squirrels AS SELECT * FROM read_parquet('{OUT_PAR}')\")\nFiltering is driven by a single reactive DuckDB query that builds a WHERE clause from the sidebar inputs:\n@reactive.calc\ndef filtered_df() -&gt; pd.DataFrame:\n    conditions = []\n    if selected_shift:\n        conditions.append(f\"shift IN ({placeholders})\")\n    if selected_fur:\n        conditions.append(f\"primary_fur_color IN ({placeholders})\")\n    if valid_behavior:\n        conditions.append(f\"({' OR '.join(f'{c} = TRUE' for c in valid_behavior)})\")\n\n    where = f\"WHERE {' AND '.join(conditions)}\" if conditions else \"\"\n    return con.execute(f\"SELECT ... FROM squirrels {where}\").df()\nThe Folium map renders inside an &lt;iframe&gt; using srcdoc, with a custom HTML/JS legend that syncs fur color selections back to Shiny via Shiny.setInputValue.\nCharts are built with Altair and embedded using vegaEmbed rather than Shiny’s default rendering, which allows width=\"container\" to make them fully responsive."
+  },
+  {
+    "objectID": "posts/squirrel-dashboard.html#ai-chat-integration",
+    "href": "posts/squirrel-dashboard.html#ai-chat-integration",
+    "title": "Geospatial Behavioral Analytics Dashboard",
+    "section": "AI Chat Integration",
+    "text": "AI Chat Integration\nThe chat tab uses querychat with a ChatGithub client (GPT-4.1). The model translates natural language into filtered DataFrames, which then drive the same chart and table components used in the map tab.\nqc = QueryChat(\n    _chat_base_df,\n    \"squirrels\",\n    client=ChatGithub(model=\"gpt-4.1\"),\n)"
+  },
+  {
+    "objectID": "posts/squirrel-dashboard.html#testing",
+    "href": "posts/squirrel-dashboard.html#testing",
+    "title": "Geospatial Behavioral Analytics Dashboard",
+    "section": "Testing",
+    "text": "Testing\nUnit tests with pytest cover data processing logic; end-to-end dashboard behavior is verified with Playwright:\npip install pytest-playwright\nplaywright install\npytest tests/"
+  },
+  {
+    "objectID": "posts/squirrel-dashboard.html#what-i-learned",
+    "href": "posts/squirrel-dashboard.html#what-i-learned",
+    "title": "Geospatial Behavioral Analytics Dashboard",
+    "section": "What I Learned",
+    "text": "What I Learned\n\nDuckDB as a query layer over Parquet is a clean pattern for dashboard backends — filtering stays fast and the query logic is easy to read and test\nEmbedding Folium inside a Shiny iframe works well but requires careful JS bridging to push legend clicks back into Shiny’s reactive graph\nquerychat abstracts a lot of the LLM-to-dataframe plumbing, but prompt design still matters — the greeting suggestions meaningfully improved the quality of first queries from users unfamiliar with the data"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Vancouver, BC • natalieetruesdell@gmail.com • 858-705-8644 • LinkedIn • GitHub • Portfolio\n\n\nData Scientist with hands-on experience leading multimodal machine learning projects — from deep learning pipelines integrating imaging and clinical data to LLM-powered retrieval systems and interactive dashboards. Skilled in Python, PyTorch, and scalable cloud ML workflows, with a strong foundation in statistics and model evaluation. Experienced communicating technical work to both technical and non-technical stakeholders.\n\n\n\n\nLanguages Python, SQL, R, Bash, Git\nData Science & Machine Learning: Pandas, NumPy, Scikit-learn, XGBoost, TensorFlow, PyTorch, predictive modeling, feature engineering, supervised and unsupervised learning, deep learning, model evaluation, cross-validation, hyperparameter tuning LLM Technologies: OpenAI API, LangChain, FAISS, Sentence Transformers, RAG pipelines, prompt engineering, vector search, embedding models, tool calling, LLM evaluation, external API integration\nData Engineering & Cloud: GCP (Vertex AI, GCS, BigQuery), AWS, DuckDB, PyArrow, Docker, CI/CD, GitHub Actions, data pipelines, workflow automation, data validation, QA/testing\nStatistics: Hypothesis testing, regression modeling, Bayesian inference, experimental design, causal inference, A/B testing, time series analysis\nData Visualization & Reporting: Matplotlib, Seaborn, Tableau, Shiny, PowerPoint, Excel\n\n\n\n\nUniversity of British Columbia (UBC), Vancouver | Master of Data Science | Aug 2025 – Jun 2026\n\nAverage: 92% (GPA: 4.33/4.33)\n\nUniversity of California, San Diego (UCSD) | B.S. Business Economics, Minor in Data Analytics | Sept 2020 – Jun 2025\n\nGPA: 3.6/4.0\n\n\n\n\nData Analytics Intern | Acorn Evaluation, Inc. | Jan 2025 – Jul 2025\n• Developed and deployed a web scraping and parsing framework to identify potential clients across 200+ websites, designing custom extraction logic (XPath, regex) and reducing manual research time by ~90% per project cycle • Built Tableau dashboards for 80% of the firm’s client portfolio, translating fragmented program data into actionable performance insights that improved client reporting efficiency and supported data-driven decision-making • Leveraged and refined ETL workflows using Python and Power Query to extract, transform, and validate multi-source program data (30K+ records), improving data consistency and reducing manual errors • Conducted data reconciliation across raw datasets to build a validated master directory, which served as the foundation for an automated web scraping pipeline that scaled lead discovery\nAccounting Intern | Lohman & Associates | Jun 2024 – Nov 2024\n• Managed data operations for 90% of the firm’s client portfolio across multiple platforms (QuickBooks, Harvest, Excel) to ensure billing accuracy and maintain reliable financial records • Created weekly operational reports consolidating data from 20 client projects, providing leadership with visibility into revenue forecasts, project performance, and resource allocation\n\n\n\nMultimodal AI for Clinical Risk Prediction | Project Lead, Tandem Research & UBC Capstone\n• Developed an end-to-end predictive modeling pipeline integrating 3D CT imaging with EHR data from 23K patients to predict mortality and hospital readmission using ResNet V2, LightGBM, and a Transformer-based model • Built a scalable cloud-based ML workflow on GCP using DuckDB, BigQuery, and Vertex AI to accelerate experimentation, improve reproducibility, and support patient-level prediction analysis • Designed a cascaded multimodal fusion approach that improved 6- and 12-month risk prediction performance by an average of 5%, demonstrating the value of combining imaging and clinical data sources • Implemented a comprehensive explainability framework utilizing TreeSHAP, Grad-CAM, and censoring experiments to quantify clinical feature importance and highlight the image regions driving predictions\nFashionRAG: LLM-Powered Product Discovery Engine | GitHub\n• Designed a complete RAG system using 2.5M+ Amazon reviews, integrating BM25 lexical retrieval, semantic embeddings, LangChain orchestration, and Llama-3.1-8B-Instant with grounding constraints and source attribution to generate reliable product recommendations • Improved recommendation quality through field-weighted representations, hybrid search fusion, and MMR reranking, increasing retrieval diversity while preserving relevance • Developed a qualitative and quantitative evaluation framework using retrieval metrics and manual relevance analysis to benchmark search strategies and guide the selection of a hybrid architecture for improved query coverage • Engineered a scalable data pipeline with DuckDB, vectorized preprocessing, and stratified sampling, reducing popularity bias in training data and achieving 3–5× faster corpus preprocessing times\nGeospatial Behavioral Analytics Dashboard | Dashboard • GitHub\n• Developed an interactive geospatial dashboard with an LLM-powered natural language interface (QueryChat + GPT-4.1), enabling non-technical users to explore geospatial data through conversational queries • Designed a responsive visualization architecture using Shiny for Python, Altair, and Folium, ensuring synchronized state management across dynamic maps, custom HTML legends, and multi-metric charts • Engineered a high-performance backend using DuckDB and Parquet to query over 3,000 Central Park squirrel observations in under a second, reducing query latency by 10% • Implemented a robust testing suite using pytest and Playwright to automate UI verification, ensuring application reliability and consistency across complex user interactions\nSurveyCleaner: Production Data Validation and Cleaning Package |TestPyPI • GitHub\n• Engineered a Python data validation package with a reusable API to standardize survey preprocessing workflows including deduplication, binary normalization, and ordinal encoding • Adopted a test-driven development (TDD) approach to achieve 100% test coverage with pytest, ensuring reliable validation logic across all edge cases • Established fully automated CI/CD pipelines using GitHub Actions, streamlining the full development lifecycle from automated testing and versioning to TestPyPI distribution and documentation hosting\n\n\n  Download PDF Version"
+  },
+  {
+    "objectID": "resume.html#summary",
+    "href": "resume.html#summary",
+    "title": "Resume",
+    "section": "",
+    "text": "Data Scientist with hands-on experience leading multimodal machine learning projects — from deep learning pipelines integrating imaging and clinical data to LLM-powered retrieval systems and interactive dashboards. Skilled in Python, PyTorch, and scalable cloud ML workflows, with a strong foundation in statistics and model evaluation. Experienced communicating technical work to both technical and non-technical stakeholders."
+  },
+  {
+    "objectID": "resume.html#skills",
+    "href": "resume.html#skills",
+    "title": "Resume",
+    "section": "",
+    "text": "Languages Python, SQL, R, Bash, Git\nData Science & Machine Learning: Pandas, NumPy, Scikit-learn, XGBoost, TensorFlow, PyTorch, predictive modeling, feature engineering, supervised and unsupervised learning, deep learning, model evaluation, cross-validation, hyperparameter tuning LLM Technologies: OpenAI API, LangChain, FAISS, Sentence Transformers, RAG pipelines, prompt engineering, vector search, embedding models, tool calling, LLM evaluation, external API integration\nData Engineering & Cloud: GCP (Vertex AI, GCS, BigQuery), AWS, DuckDB, PyArrow, Docker, CI/CD, GitHub Actions, data pipelines, workflow automation, data validation, QA/testing\nStatistics: Hypothesis testing, regression modeling, Bayesian inference, experimental design, causal inference, A/B testing, time series analysis\nData Visualization & Reporting: Matplotlib, Seaborn, Tableau, Shiny, PowerPoint, Excel"
+  },
+  {
+    "objectID": "resume.html#education",
+    "href": "resume.html#education",
+    "title": "Resume",
+    "section": "",
+    "text": "University of British Columbia (UBC), Vancouver | Master of Data Science | Aug 2025 – Jun 2026\n\nAverage: 92% (GPA: 4.33/4.33)\n\nUniversity of California, San Diego (UCSD) | B.S. Business Economics, Minor in Data Analytics | Sept 2020 – Jun 2025\n\nGPA: 3.6/4.0"
+  },
+  {
+    "objectID": "resume.html#experience",
+    "href": "resume.html#experience",
+    "title": "Resume",
+    "section": "",
+    "text": "Data Analytics Intern | Acorn Evaluation, Inc. | Jan 2025 – Jul 2025\n• Developed and deployed a web scraping and parsing framework to identify potential clients across 200+ websites, designing custom extraction logic (XPath, regex) and reducing manual research time by ~90% per project cycle • Built Tableau dashboards for 80% of the firm’s client portfolio, translating fragmented program data into actionable performance insights that improved client reporting efficiency and supported data-driven decision-making • Leveraged and refined ETL workflows using Python and Power Query to extract, transform, and validate multi-source program data (30K+ records), improving data consistency and reducing manual errors • Conducted data reconciliation across raw datasets to build a validated master directory, which served as the foundation for an automated web scraping pipeline that scaled lead discovery\nAccounting Intern | Lohman & Associates | Jun 2024 – Nov 2024\n• Managed data operations for 90% of the firm’s client portfolio across multiple platforms (QuickBooks, Harvest, Excel) to ensure billing accuracy and maintain reliable financial records • Created weekly operational reports consolidating data from 20 client projects, providing leadership with visibility into revenue forecasts, project performance, and resource allocation"
+  },
+  {
+    "objectID": "resume.html#projects",
+    "href": "resume.html#projects",
+    "title": "Resume",
+    "section": "",
+    "text": "Multimodal AI for Clinical Risk Prediction | Project Lead, Tandem Research & UBC Capstone\n• Developed an end-to-end predictive modeling pipeline integrating 3D CT imaging with EHR data from 23K patients to predict mortality and hospital readmission using ResNet V2, LightGBM, and a Transformer-based model • Built a scalable cloud-based ML workflow on GCP using DuckDB, BigQuery, and Vertex AI to accelerate experimentation, improve reproducibility, and support patient-level prediction analysis • Designed a cascaded multimodal fusion approach that improved 6- and 12-month risk prediction performance by an average of 5%, demonstrating the value of combining imaging and clinical data sources • Implemented a comprehensive explainability framework utilizing TreeSHAP, Grad-CAM, and censoring experiments to quantify clinical feature importance and highlight the image regions driving predictions\nFashionRAG: LLM-Powered Product Discovery Engine | GitHub\n• Designed a complete RAG system using 2.5M+ Amazon reviews, integrating BM25 lexical retrieval, semantic embeddings, LangChain orchestration, and Llama-3.1-8B-Instant with grounding constraints and source attribution to generate reliable product recommendations • Improved recommendation quality through field-weighted representations, hybrid search fusion, and MMR reranking, increasing retrieval diversity while preserving relevance • Developed a qualitative and quantitative evaluation framework using retrieval metrics and manual relevance analysis to benchmark search strategies and guide the selection of a hybrid architecture for improved query coverage • Engineered a scalable data pipeline with DuckDB, vectorized preprocessing, and stratified sampling, reducing popularity bias in training data and achieving 3–5× faster corpus preprocessing times\nGeospatial Behavioral Analytics Dashboard | Dashboard • GitHub\n• Developed an interactive geospatial dashboard with an LLM-powered natural language interface (QueryChat + GPT-4.1), enabling non-technical users to explore geospatial data through conversational queries • Designed a responsive visualization architecture using Shiny for Python, Altair, and Folium, ensuring synchronized state management across dynamic maps, custom HTML legends, and multi-metric charts • Engineered a high-performance backend using DuckDB and Parquet to query over 3,000 Central Park squirrel observations in under a second, reducing query latency by 10% • Implemented a robust testing suite using pytest and Playwright to automate UI verification, ensuring application reliability and consistency across complex user interactions\nSurveyCleaner: Production Data Validation and Cleaning Package |TestPyPI • GitHub\n• Engineered a Python data validation package with a reusable API to standardize survey preprocessing workflows including deduplication, binary normalization, and ordinal encoding • Adopted a test-driven development (TDD) approach to achieve 100% test coverage with pytest, ensuring reliable validation logic across all edge cases • Established fully automated CI/CD pipelines using GitHub Actions, streamlining the full development lifecycle from automated testing and versioning to TestPyPI distribution and documentation hosting\n\n\n  Download PDF Version"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I’m a data scientist with a background in business economics and a passion for building ML systems that are rigorous, reproducible, and useful.\nAvailable to start: July 15, 2026 · Vancouver, BC · natalieetruesdell@gmail.com"
+  },
+  {
+    "objectID": "about.html#skills",
+    "href": "about.html#skills",
+    "title": "About Me",
+    "section": "Skills",
+    "text": "Skills\nLanguages & Tools: Python, R, SQL, Bash, Git, Docker\nMachine Learning: Pandas, NumPy, Scikit-learn, XGBoost, TensorFlow, PyTorch, feature engineering, supervised & unsupervised learning, deep learning, model evaluation, cross-validation, hyperparameter tuning\nLLM Technologies: OpenAI API, LangChain, FAISS, RAG Pipelines, Prompt Engineering, Vector Search, Embedding Models, Tool Calling, LLM Evaluation\nData Engineering & Cloud: GCP (Vertex AI, GCS, GCE), AWS, PyArrow, CI/CD, GitHub Actions, data pipelines, workflow automation, data validation, QA/testing\nStatistics: Hypothesis testing, regression modeling, Bayesian inference, experimental design, causal inference, A/B testing, time series analysis"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\nMaster of Data Science — UBC Vancouver Aug 2025 – Jun 2026\nCumulative Average: 92%\nCoursework: Machine Learning, Deep Learning, NLP, Cloud Computing, Causal Inference, Spatial & Temporal Models, A/B Testing\nB.S. Business Economics, Minor in Data Analytics — UC San Diego\nSept 2020 – Jun 2025\nGPA: 3.6 / 4.0"
+  },
+  {
+    "objectID": "posts/patient-outcomes.html",
+    "href": "posts/patient-outcomes.html",
+    "title": "Multimodal AI for Clinical Risk Prediction",
+    "section": "",
+    "text": "NoteProject Context\n\n\n\nThis project was completed as part of my Master’s capstone in partnership with Tandem Research, where I led a four-person team through the full pipeline design, EHR/GBM modeling, fusion strategy, and infrastructure. Tandem partners with healthcare organizations on applied data science initiatives, and some details of this project — including the specific clinical dataset used, exact performance results, and certain visual outputs (e.g. model explainability figures) — are private and protected under a non-disclosure agreement. This post describes the methodology, modeling approach, and high-level findings at a level appropriate for public sharing."
+  },
+  {
+    "objectID": "posts/patient-outcomes.html#overview",
+    "href": "posts/patient-outcomes.html#overview",
+    "title": "Multimodal AI for Clinical Risk Prediction",
+    "section": "Overview",
+    "text": "Overview\nClinicians often lack reliable tools to identify which patients are at the highest risk of death or hospital readmission following a serious diagnosis. Most existing machine learning approaches in healthcare rely on a single data source — either structured electronic health records (EHR) or medical imaging — but rarely combine both. This means models built on a single modality may miss important context available elsewhere in a patient’s record.\nWorking with a healthcare-focused research partner, our team set out to answer:\n\nHow can structured EHR data and 3D medical imaging be combined into a multimodal machine learning framework to predict patient mortality and hospital readmission?\n\nWe built a reproducible, end-to-end pipeline that integrates tabular clinical history with volumetric imaging data, explored multiple ways of fusing those signals together, and prioritized interpretability throughout, since our partner’s goal was a research tool that clinicians and data scientists could trust and build on, not a black box."
+  },
+  {
+    "objectID": "posts/patient-outcomes.html#approach",
+    "href": "posts/patient-outcomes.html#approach",
+    "title": "Multimodal AI for Clinical Risk Prediction",
+    "section": "Approach",
+    "text": "Approach\n\nEHR Modeling\nBefore modeling, raw clinical history goes through a standardized preprocessing pipeline: cohorts are defined, records are standardized into a common data format, outcome labels are aligned to a fixed prediction window with a temporal offset to avoid leakage, and patient features are constructed.\nStructured clinical history was modeled two complementary ways:\n\nA gradient-boosted tree model (LightGBM) trained on aggregated, ontology-based event counts — effective at capturing nonlinear interactions in tabular clinical features.\nA transformer-based sequence model trained directly on longitudinal clinical event sequences, producing contextual patient embeddings that capture how a patient’s history unfolds over time.\n\nBoth paths were designed with leakage-free, patient-level data splits and a temporal offset between recorded history and prediction time.\n\n\n\nDual-track EHR pipeline: tabular features feed a gradient-boosted model, while raw event sequences feed a transformer encoder that produces patient embeddings.\n\n\nTo understand how sensitive each model is to the amount of history it has access to, we ran a lookback-window experiment, retraining both LightGBM and the transformer under restricted history windows (1 year, 5 years, 10 years, and full available history) and evaluating performance across all downstream tasks. This was paired with a SHAP-based domain analysis that aggregated feature attributions by clinical domain (e.g. conditions, medications, procedures) to see how the relative importance of different types of clinical evidence shifts as available history shrinks — a proxy for how the model would behave on patients with fragmented or incomplete records, a common real-world scenario.\n\n\nImaging Modeling\nMedical imaging studies were processed through a slice-based encoder followed by a sequential aggregation model to produce a single per-patient risk score.\nEach CT volume’s axial slices were rendered as three clinically-relevant HU windows stacked as RGB channels, then passed through a pretrained ResNetV2 convolutional backbone to extract a per-slice feature vector. Features were cached to disk so the expensive convolutional pass only needed to run once per scan, decoupling it from downstream experimentation. Per-scan feature sequences were padded or truncated to a fixed length, with an accompanying mask and a positional feature encoding each slice’s physical depth, before being passed into a recurrent sequence model (LSTM/GRU, with a Transformer variant also supported) that aggregated across slices into a single risk score per study.\nTraining used mixed-precision (bfloat16) to keep the large per-slice feature dimensionality numerically stable, weighted sampling to address class imbalance across the low-prevalence clinical outcomes, and resumable checkpointing so long-running training jobs could survive interruption on cloud compute without losing progress.\n\n\nFusion Strategies\nWe evaluated two ways of combining imaging and EHR signals:\n\nLate fusion (stacking): independent model outputs from each modality are combined via logistic regression, allowing systematic comparison of single-modality, pairwise, and full multimodal configurations.\nCascaded fusion (feature-level integration): imaging-derived risk scores are injected directly as a feature into the tabular EHR pipeline, allowing a downstream model to learn nonlinear interactions between imaging and clinical variables natively.\n\n\n\n\nCascaded fusion: an imaging-derived risk score is merged into the EHR feature matrix, then combined with the sequence model’s output via late fusion to produce the final prediction.\n\n\nNo single fusion strategy dominated across every clinical task — the EHR-only models were consistently strong, and feature-level (cascaded) integration of imaging signal tended to outperform decision-level fusion, suggesting that how modalities are combined matters as much as whether they’re combined at all.\n\n\nInterpretability\nBecause the project’s primary stakeholder cared as much about why a model made a prediction as the prediction itself, explainability was built into the pipeline rather than added after the fact. Techniques used included:\n\nTreeSHAP values to identify which clinical features drove individual gradient-boosted model predictions, with features mapped back to human-readable clinical concepts, and aggregated by clinical domain to compare contribution patterns across tasks and lookback windows.\nIntegrated Gradients and embedding probing to interpret the transformer-based sequence model’s hidden representations.\nGrad-CAM and slice-importance analysis on the imaging model, to surface which regions of a scan most influenced a prediction.\nA censoring/lookback analysis that systematically restricted how much patient history a model could see, in order to measure how predictive performance degrades as historical context shrinks.\n\nThe specific outputs of these analyses (e.g. SHAP plots, Grad-CAM heatmaps) are part of the project’s private deliverables and aren’t included here, but the methodology itself is described above."
+  },
+  {
+    "objectID": "posts/patient-outcomes.html#data-product",
+    "href": "posts/patient-outcomes.html#data-product",
+    "title": "Multimodal AI for Clinical Risk Prediction",
+    "section": "Data Product",
+    "text": "Data Product\nRather than building a standalone dashboard, we delivered a cloud-based, queryable pipeline: every model run, prediction, and explainability output is logged and stored so that our research partner’s team can query results directly and extend the pipeline to new datasets without rebuilding infrastructure from scratch. The emphasis throughout was on reproducibility and modularity — each pipeline component (imaging featurization, EHR modeling, fusion, explainability) can be rerun or swapped independently."
+  },
+  {
+    "objectID": "posts/patient-outcomes.html#key-takeaways",
+    "href": "posts/patient-outcomes.html#key-takeaways",
+    "title": "Multimodal AI for Clinical Risk Prediction",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nEHR-based models were consistently strong predictors of mortality and readmission risk on their own.\nImaging signal added the most value when integrated at the feature level rather than the decision level.\nNo single fusion configuration was best across every task — the right approach depends on the specific clinical question being asked.\nBuilding interpretability into the pipeline from the start (rather than retrofitting it) made the results far more actionable for clinical stakeholders."
+  },
+  {
+    "objectID": "posts/patient-outcomes.html#future-directions",
+    "href": "posts/patient-outcomes.html#future-directions",
+    "title": "Multimodal AI for Clinical Risk Prediction",
+    "section": "Future Directions",
+    "text": "Future Directions\nRecommended next steps include evaluating the full dataset at scale, restricting model inputs to information available earlier in a patient’s care pathway to improve real-world deployment practicality, completing the historical-lookback experiments at full scale, and containerizing the pipeline to improve reproducibility for future projects."
+  },
+  {
     "objectID": "posts/amazon-search.html",
     "href": "posts/amazon-search.html",
-    "title": "Smart Amazon Product Query",
+    "title": "FashionRAG: LLM-Powered Product Discovery Engine",
     "section": "",
     "text": "An end-to-end Retrieval-Augmented Generation (RAG) system built over the Amazon Reviews 2023 dataset (Amazon Fashion category). Given a natural language query, the system retrieves the most relevant products and generates a grounded answer using an LLM. Built with a teammate for DSCI 575.\nGitHub\nThe app supports three modes: BM25 keyword retrieval, semantic search via sentence embeddings + FAISS, and hybrid RAG which combines both and feeds the results to an LLM."
   },
   {
     "objectID": "posts/amazon-search.html#overview",
     "href": "posts/amazon-search.html#overview",
-    "title": "Smart Amazon Product Query",
+    "title": "FashionRAG: LLM-Powered Product Discovery Engine",
     "section": "",
     "text": "An end-to-end Retrieval-Augmented Generation (RAG) system built over the Amazon Reviews 2023 dataset (Amazon Fashion category). Given a natural language query, the system retrieves the most relevant products and generates a grounded answer using an LLM. Built with a teammate for DSCI 575.\nGitHub\nThe app supports three modes: BM25 keyword retrieval, semantic search via sentence embeddings + FAISS, and hybrid RAG which combines both and feeds the results to an LLM."
   },
   {
     "objectID": "posts/amazon-search.html#rag-pipeline",
     "href": "posts/amazon-search.html#rag-pipeline",
-    "title": "Smart Amazon Product Query",
+    "title": "FashionRAG: LLM-Powered Product Discovery Engine",
     "section": "RAG Pipeline",
     "text": "RAG Pipeline\nUser Query\n    │\n    ├─────────────────────┐\n    ▼                     ▼\n┌──────────┐        ┌──────────────┐\n│  BM25    │        │   Semantic   │\n│ Search   │        │  Search      │\n│(rank_bm25│        │(all-MiniLM + │\n│   )      │        │    FAISS)    │\n└────┬─────┘        └──────┬───────┘\n     │                     │\n     │  Min-Max normalize  │\n     │  scores separately  │\n     └──────────┬──────────┘\n                ▼\n     Weighted Score Merge\n     (default: 60% semantic,\n               40% BM25)\n     Merged & ranked by ASIN\n                │\n                │ Top-k=15 Documents\n                ▼\n     ┌────────────────────┐\n     │   Context Builder  │\n     │  ASIN · title ·    │\n     │  rating · price ·  │\n     │  store · review    │\n     └──────────┬─────────┘\n                │\n                ▼\n     ┌────────────────────┐\n     │   LLM Generator    │\n     │  llama-3.1-8b-     │\n     │  instant (Groq)    │\n     └──────────┬─────────┘\n                │\n                ▼\n        Generated Answer\n      + Retrieved Documents"
   },
   {
     "objectID": "posts/amazon-search.html#data-pipeline",
     "href": "posts/amazon-search.html#data-pipeline",
-    "title": "Smart Amazon Product Query",
+    "title": "FashionRAG: LLM-Powered Product Discovery Engine",
     "section": "Data Pipeline",
     "text": "Data Pipeline\nRather than taking the first N rows, the corpus is built with a stratified window-function sample in DuckDB across three axes — product rating bucket, review text length, and verified purchase status — giving up to 36 strata with 500 reviews each, capped at one review per product per stratum.\n# src/data_processing.py — stratify_corpus (simplified)\ncon = duckdb.connect()\ncon.execute(f\"\"\"\n    COPY(\n        WITH one_per_product AS (\n            SELECT *,\n                ROW_NUMBER() OVER (\n                    PARTITION BY rating_bucket, len_tier, verified_purchase, parent_asin\n                    ORDER BY helpful_vote DESC, random()\n                ) AS product_rank\n            FROM labelled\n        ),\n        ranked AS (\n            SELECT *,\n                ROW_NUMBER() OVER (\n                    PARTITION BY rating_bucket, len_tier, verified_purchase\n                    ORDER BY helpful_vote DESC, random()\n                ) AS stratum_rank\n            FROM one_per_product\n            WHERE product_rank = 1\n        )\n        SELECT * FROM ranked\n        WHERE stratum_rank &lt;= 500\n\"\"\")\ncon.close()\nFields for BM25 and semantic retrieval are built separately with different field weighting strategies. BM25 up-weights structured metadata heavily; semantic encoding uses a lighter boost since the embedding model handles meaning more holistically:\ndef build_bm25_text(corpus):\n    # product_title × 3, review_title × 2, then store + review body\n    return (\n        corpus[\"product_title\"].fillna(\"\").astype(str) * 3 + \" \" +\n        corpus[\"review_title\"].fillna(\"\").astype(str) * 2 + \" \" +\n        corpus[\"store\"].fillna(\"\").astype(str) + \" \" +\n        corpus[\"review_body\"].fillna(\"\").astype(str)\n    )\n\ndef build_semantic_text(corpus):\n    # product_title × 2 + review body\n    return (\n        corpus[\"product_title\"].fillna(\"\").astype(str) * 2 + \" \" +\n        corpus[\"review_body\"].fillna(\"\").astype(str)\n    )"
   },
   {
     "objectID": "posts/amazon-search.html#retrieval",
     "href": "posts/amazon-search.html#retrieval",
-    "title": "Smart Amazon Product Query",
+    "title": "FashionRAG: LLM-Powered Product Discovery Engine",
     "section": "Retrieval",
     "text": "Retrieval\nBM25 tokenizes with lowercase, punctuation removal, and stopword filtering. Vectorized preprocessing over the full corpus runs 3–5× faster than row-wise apply.\nSemantic search encodes with all-MiniLM-L6-v2 (L2-normalized for cosine similarity via IndexFlatIP) and retrieves with MMR (fetch_k=50, return k=15) to balance relevance and diversity, then aggregates to the product level by averaging the top-3 chunk scores per ASIN.\nHybrid normalizes both score sets to [0, 1] independently, then merges:\nhybrid_score = (0.6 × semantic_score) + (0.4 × bm25_score)"
   },
   {
     "objectID": "posts/amazon-search.html#rag-chain",
     "href": "posts/amazon-search.html#rag-chain",
-    "title": "Smart Amazon Product Query",
+    "title": "FashionRAG: LLM-Powered Product Discovery Engine",
     "section": "RAG Chain",
     "text": "RAG Chain\nBoth the semantic and hybrid chains share the same context builder, prompt template, and LLM. The context builder formats each retrieved document into a structured block:\ndef build_context(docs: list) -&gt; str:\n    return \"\\n\\n\".join(\n        f\"Product ASIN: {doc.metadata.get('parent_asin', 'N/A')}\\n\"\n        f\"Title: {doc.metadata.get('product_title', 'N/A')}\\n\"\n        f\"Rating: {doc.metadata.get('rating', 'N/A')}/5\\n\"\n        f\"Average Rating: {doc.metadata.get('average_rating', 'N/A')}/5\\n\"\n        f\"Price: {doc.metadata.get('price', 'N/A')}\\n\"\n        f\"Store: {doc.metadata.get('store', 'N/A')}\\n\"\n        f\"Review: {doc.page_content}\\n\"\n        for doc in docs\n    )\nThe chain wires retriever → context builder → prompt → LLM using LangChain LCEL:\nchain = (\n    {\n        \"context\": hybrid_retriever | build_context,\n        \"question\": RunnablePassthrough()\n    }\n    | prompt_template\n    | llm\n    | StrOutputParser()\n)\nThe system prompt instructs the model to answer using only the provided review context, cite ASINs in recommendations, highlight relevant product details like fit and durability, compare products when multiple are relevant, and explicitly acknowledge when context is insufficient rather than hallucinating."
   },
   {
     "objectID": "posts/amazon-search.html#example",
     "href": "posts/amazon-search.html#example",
-    "title": "Smart Amazon Product Query",
+    "title": "FashionRAG: LLM-Powered Product Discovery Engine",
     "section": "Example",
     "text": "Example\nSearch mode — query: “formal summer dress”\n\nKIMILILY Women’s Sleeveless V Neck Lace Summer Dress ★★★★☆ 3.7 “Super cute but the biggest size does not fit me” · Score: 17.2 \n\nRAG mode — query: “I need a formal dress for a summer wedding”\n\n\n\nRAG mode response\n\n\n\nBased on the context, the Allimy Women’s Elegant V Neck Party Wedding Lace Midi Dress (B07CYQSN8S) and the FAIRY COUPLE Women’s Off Shoulder Floral Evening Prom Dress (B07B7H4RLF) seem like great options…"
   },
   {
     "objectID": "posts/amazon-search.html#evaluation",
     "href": "posts/amazon-search.html#evaluation",
-    "title": "Smart Amazon Product Query",
+    "title": "FashionRAG: LLM-Powered Product Discovery Engine",
     "section": "Evaluation",
     "text": "Evaluation\nRetrieval is evaluated with Precision@k, Recall@k, and MRR using runtime-derived ground truth — for each test query, relevant ASINs are identified by regex-matching product_title in the cleaned corpus, so the ground truth set regenerates automatically when the corpus is rebuilt.\nAn A/B experiment compared the shipped model (llama-3.1-8b-instant) against a larger challenger (llama-3.3-70b-versatile) with identical retrieved context and prompt, so any output differences are attributable solely to the model."
   },
   {
     "objectID": "posts/amazon-search.html#what-i-learned",
     "href": "posts/amazon-search.html#what-i-learned",
-    "title": "Smart Amazon Product Query",
+    "title": "FashionRAG: LLM-Powered Product Discovery Engine",
     "section": "What I Learned",
     "text": "What I Learned\n\nStratified sampling over a 2.5M review corpus made a meaningful difference to retrieval quality compared to a naive slice — the naive approach over-represented popular products and short reviews\nMMR at retrieval time noticeably reduced result redundancy for broad queries where many reviews describe the same product\nHolding context and prompt constant in the A/B experiment was the right design — it surfaced real model capability differences rather than confounding from retrieval variance"
   },
@@ -312,6 +312,6 @@
     "href": "index.html",
     "title": "Natalie Truesdell",
     "section": "",
-    "text": "I’m a Data Scientist based in Vancouver, recently finished with my Master of Data Science at UBC. I thrive at the intersection of machine learning and messy, real-world data. Whether I’m wrangling millions of product reviews, fusing clinical imaging with EHR data, or building tools to make data cleaning less of a headache, I am always focused on the practical application of my work. Above all, I believe in building models that are transparent, reproducible, and ready for the real world.\n\nHere’s what I’ve been building:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSmart Amazon Product Query\n\n\n\nNLP\n\nRAG\n\nPython\n\nFAISS\n\n\n\nAn end-to-end RAG system over 2.5M Amazon Fashion reviews, combining BM25 and semantic search with an LLM generator.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultimodal Patient Outcome Prediction\n\n\n\nmachine learning\n\nhealthcare\n\nmultimodal\n\nexplainability\n\n\n\nPredicting mortality and readmission by combining 3D CT imaging with structured EHR data. UBC MDS Capstone in partnership with Tandem Research.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSurveyCleaner Python Package\n\n\n\nPython\n\nOpen Source\n\nCI/CD\n\nTesting\n\n\n\nAn open-source Python package for cleaning and preprocessing survey data, published on TestPyPI.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNYC Squirrel Census Dashboard\n\n\n\nPython\n\nShiny\n\nData Visualization\n\nDashboard\n\n\n\nAn interactive dashboard exploring squirrel behavior and spatial patterns in Central Park, built with Shiny for Python.\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "I’m a Data Scientist based in Vancouver, recently finished with my Master of Data Science at UBC. I thrive at the intersection of machine learning and messy, real-world data. Whether I’m wrangling millions of product reviews, fusing clinical imaging with EHR data, or building tools to make data cleaning less of a headache, I am always focused on the practical application of my work. Above all, I believe in building models that are transparent, reproducible, and ready for the real world.\n\nHere’s what I’ve been building:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFashionRAG: LLM-Powered Product Discovery Engine\n\n\n\nNLP\n\nRAG\n\nPython\n\nFAISS\n\n\n\nAn end-to-end RAG system over 2.5M Amazon Fashion reviews, combining BM25 and semantic search with an LLM generator.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultimodal AI for Clinical Risk Prediction\n\n\n\nmultimodal\n\ncomputer vision\n\ndeep learning\n\nexplainable AI\n\n\n\nPredicting mortality and readmission by combining 3D CT imaging with structured EHR data. UBC MDS Capstone in partnership with Tandem Research.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSurveyCleaner: Production Data Validation and Cleaning Package\n\n\n\nPython\n\nOpen Source\n\nCI/CD\n\nTesting\n\n\n\nAn open-source Python package for cleaning and preprocessing survey data, published on TestPyPI.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGeospatial Behavioral Analytics Dashboard\n\n\n\nPython\n\nShiny\n\nData Visualization\n\nDashboard\n\n\n\nAn interactive dashboard exploring squirrel behavior and spatial patterns in Central Park, built with Shiny for Python.\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
