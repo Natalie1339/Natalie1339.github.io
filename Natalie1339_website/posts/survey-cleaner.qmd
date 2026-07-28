@@ -1,5 +1,5 @@
 ---
-title: "SurveyCleaner Python Package"
+title: "SurveyCleaner: Production Data Validation and Cleaning Package"
 description: "An open-source Python package for cleaning and preprocessing survey data, published on TestPyPI."
 order: 3
 image: ../images/survey-thumb.png

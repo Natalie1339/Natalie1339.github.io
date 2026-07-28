@@ -1,5 +1,5 @@
 ---
-title: "NYC Squirrel Census Dashboard"
+title: "Geospatial Behavioral Analytics Dashboard"
 description: "An interactive dashboard exploring squirrel behavior and spatial patterns in Central Park, built with Shiny for Python."
 order: 4
 image: ../images/squirrels-thumb.png

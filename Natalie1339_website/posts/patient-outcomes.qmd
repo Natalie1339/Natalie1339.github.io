@@ -1,16 +1,16 @@
 ---
-title: "Multimodal Patient Outcome Prediction"
+title: "Multimodal AI for Clinical Risk Prediction"
 description: "Predicting mortality and readmission by combining 3D CT imaging with structured EHR data. UBC MDS Capstone in partnership with Tandem Research."
 order: 2
 image: ../images/patient-thumb.png
-date: 2026-06
-categories: [machine learning, healthcare, multimodal, explainability]
+date: 2026-06-25
+categories: [multimodal, computer vision, deep learning, explainable AI]
 ---
 
 ::: {.callout-note}
 ## Project Context
 
-This project was completed as part of my Master's capstone in partnership with **Tandem Research**. Tandem partners with healthcare organizations on applied data science initiatives, and some details of this project — including the specific clinical dataset used, exact performance results, and certain visual outputs (e.g. model explainability figures) — are private and protected under a non-disclosure agreement. This post describes the methodology, modeling approach, and high-level findings at a level appropriate for public sharing.
+This project was completed as part of my Master's capstone in partnership with **Tandem Research**, where I led a four-person team through the full pipeline design, EHR/GBM modeling, fusion strategy, and infrastructure. Tandem partners with healthcare organizations on applied data science initiatives, and some details of this project — including the specific clinical dataset used, exact performance results, and certain visual outputs (e.g. model explainability figures) — are private and protected under a non-disclosure agreement. This post describes the methodology, modeling approach, and high-level findings at a level appropriate for public sharing.
 :::
 
 ## Overview
@@ -38,9 +38,15 @@ Both paths were designed with leakage-free, patient-level data splits and a temp
 
 ![Dual-track EHR pipeline: tabular features feed a gradient-boosted model, while raw event sequences feed a transformer encoder that produces patient embeddings.](../images/ehr_model_pipeline.png)
 
+To understand how sensitive each model is to the amount of history it has access to, we ran a **lookback-window experiment**, retraining both LightGBM and the transformer under restricted history windows (1 year, 5 years, 10 years, and full available history) and evaluating performance across all downstream tasks. This was paired with a **SHAP-based domain analysis** that aggregated feature attributions by clinical domain (e.g. conditions, medications, procedures) to see how the relative importance of different types of clinical evidence shifts as available history shrinks — a proxy for how the model would behave on patients with fragmented or incomplete records, a common real-world scenario.
+
 ### Imaging Modeling
 
-Medical imaging studies were processed through a slice-based encoder followed by a sequential aggregation model (bidirectional LSTM) to produce a single per-patient risk score. Imaging features were extracted using a pretrained convolutional backbone and aggregated across hundreds of image slices per study.
+Medical imaging studies were processed through a slice-based encoder followed by a sequential aggregation model to produce a single per-patient risk score.
+
+Each CT volume's axial slices were rendered as three clinically-relevant HU windows stacked as RGB channels, then passed through a pretrained ResNetV2 convolutional backbone to extract a per-slice feature vector. Features were cached to disk so the expensive convolutional pass only needed to run once per scan, decoupling it from downstream experimentation. Per-scan feature sequences were padded or truncated to a fixed length, with an accompanying mask and a positional feature encoding each slice's physical depth, before being passed into a recurrent sequence model (LSTM/GRU, with a Transformer variant also supported) that aggregated across slices into a single risk score per study.
+
+Training used mixed-precision (bfloat16) to keep the large per-slice feature dimensionality numerically stable, weighted sampling to address class imbalance across the low-prevalence clinical outcomes, and resumable checkpointing so long-running training jobs could survive interruption on cloud compute without losing progress.
 
 ### Fusion Strategies
 
@@ -58,7 +64,7 @@ No single fusion strategy dominated across every clinical task — the EHR-only 
 
 Because the project's primary stakeholder cared as much about *why* a model made a prediction as the prediction itself, explainability was built into the pipeline rather than added after the fact. Techniques used included:
 
-- **TreeSHAP** values to identify which clinical features drove individual gradient-boosted model predictions, with features mapped back to human-readable clinical concepts.
+- **TreeSHAP** values to identify which clinical features drove individual gradient-boosted model predictions, with features mapped back to human-readable clinical concepts, and aggregated by clinical domain to compare contribution patterns across tasks and lookback windows.
 - **Integrated Gradients and embedding probing** to interpret the transformer-based sequence model's hidden representations.
 - **Grad-CAM and slice-importance analysis** on the imaging model, to surface which regions of a scan most influenced a prediction.
 - A **censoring/lookback analysis** that systematically restricted how much patient history a model could see, in order to measure how predictive performance degrades as historical context shrinks.

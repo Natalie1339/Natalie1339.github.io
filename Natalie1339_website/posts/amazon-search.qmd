@@ -1,5 +1,5 @@
 ---
-title: "Smart Amazon Product Query"
+title: "FashionRAG: LLM-Powered Product Discovery Engine"
 description: "An end-to-end RAG system over 2.5M Amazon Fashion reviews, combining BM25 and semantic search with an LLM generator."
 order: 1
 image: ../images/amazon-thumb.png
